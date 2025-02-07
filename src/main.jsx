@@ -23,6 +23,7 @@ const router = createBrowserRouter([
     element: <Layout />, // Shared Layout
     children: [
       { index: true, element: <Home /> }, // Default route
+      { path: "/home", element: <Home /> },
       { path: "services", element: <Services /> },
       { path: "services/bis", element: <Bis /> },
       { path: "*", element: <NotFound /> }, // Catch-all route

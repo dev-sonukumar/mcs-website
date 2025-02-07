@@ -1,56 +1,85 @@
-import React from "react";
+import { Link } from "react-router";
 
 const Footer = () => {
   return (
-    <div>
-      <footer className="bg-[var(--bgcolor1)] py-8">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center">
-            {/* Address Column */}
-            <div>
-              <h2 className="text-xl font-bold mb-2">Address</h2>
-              <p>123 Main Street</p>
-              <p>City, State, ZIP</p>
-              <p>Country</p>
-            </div>
+    <footer className="bg-gray-800 text-white py-8">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Column 1: About Us */}
+          <div className="mb-8 sm:mb-0">
+            <h3 className="text-lg font-semibold mb-4">About Us</h3>
+            <p className="text-sm text-gray-300">
+              We are a company dedicated to providing the best service to our
+              customers. Our mission is to make your life easier with our
+              innovative solutions.
+            </p>
+          </div>
 
-            {/* Our Services Links Column */}
-            <div>
-              <h2 className="text-xl font-bold mb-2">Our Services</h2>
-              <ul>
-                <li>
-                  <a href="#" className="hover:underline">
-                    Service 1
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:underline">
-                    Service 2
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:underline">
-                    Service 3
-                  </a>
-                </li>
-              </ul>
-            </div>
+          {/* Column 2: Quick Links */}
+          <div className="mb-8 sm:mb-0">
+            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul className="text-sm text-gray-300">
+              <li className="mb-2">
+                <Link
+                  href="#"
+                  className="hover:text-gray-400 transition duration-300"
+                >
+                  Home
+                </Link>
+              </li>
+              <li className="mb-2">
+                <Link
+                  href="#"
+                  className="hover:text-gray-400 transition duration-300"
+                >
+                  Services
+                </Link>
+              </li>
+              <li className="mb-2">
+                <Link
+                  href="#"
+                  className="hover:text-gray-400 transition duration-300"
+                >
+                  About
+                </Link>
+              </li>
+              <li className="mb-2">
+                <Link
+                  href="#"
+                  className="hover:text-gray-400 transition duration-300"
+                >
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
 
-            {/* Contact Information Column */}
-            <div>
-              <h2 className="text-xl font-bold mb-2">Contact Information</h2>
-              <p>Email: info@example.com</p>
-              <p>Phone: +123-456-7890</p>
-            </div>
+          {/* Column 3: Contact Info */}
+          <div className="mb-8 sm:mb-0">
+            <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
+            <ul className="text-sm text-gray-300">
+              <li className="mb-2">
+                <span className="font-semibold">Address:</span> 123 Main St,
+                City, Country
+              </li>
+              <li className="mb-2">
+                <span className="font-semibold">Phone:</span> +1 234 567 890
+              </li>
+              <li className="mb-2">
+                <span className="font-semibold">Email:</span> info@example.com
+              </li>
+            </ul>
           </div>
         </div>
-      </footer>
-      <div className="bg-[var(--bgcolor5)] text-[var(--bgcolor)] ">
-        <p className="text-[10px] text-center py-2">
-          Copyright © 2025 - Mcs Technology. All rights reserved.
-        </p>
+
+        {/* Bottom Section: Copyright */}
+        <div className="border-t border-gray-700 mt-8 pt-8 text-center">
+          <p className="text-sm text-gray-300">
+            &copy; {new Date().getFullYear()} Your Company. All rights reserved.
+          </p>
+        </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

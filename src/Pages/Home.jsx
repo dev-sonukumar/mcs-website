@@ -1,13 +1,13 @@
-import React from "react";
 import OurServices from "../components/OurServices";
-import { div } from "framer-motion/client";
 import Hero from "../components/Hero";
+import HappyClientServicesCount from "../components/HappyClientServiceCount";
 
 const Home = () => {
   return (
     <div className="flex flex-col">
       <Hero />
       <OurServices />
+      <HappyClientServicesCount />
     </div>
   );
 };

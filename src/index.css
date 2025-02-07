@@ -7,26 +7,25 @@
 .bdr {
   border: 1px solid red;
 }
-
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
 :root {
-  --main-color: #e6b905;
-  --main2-color: #ca8a04;
+  --main-color: #ff5f49;
+  --main-color2: #f2f9ff;
+  --main-color3: #f1faf5;
   --secondary-color: #097969;
   --secondary2-color: #06594f;
-  --navbg-color: #d3f1df;
-  --bg-color: #111;
-  --bg1-color: #85a98f;
-  --bg2-color: #5a6c57;
-  --bgcolor: #e4f5ff;
-  --bgcolor1: #c3e8fd;
-  --bgcolor2: #93d7ff;
-  --bgcolor3: #b4e681;
-  --bgcolor4: #0000ff;
-  --bgcolor5: #000000;
+  --text-color: #ffffff;
+  --color-black: #28282b;
+  --color-white: #fdfdfd;
+  --card-color: #f6eee8;
 }
 
 body {
-  @apply bg-[#111] text-[#111] font-inter;
+  @apply font-inter;
+  background-color: var(--color-white);
 }
 
 @layer components {

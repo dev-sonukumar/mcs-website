@@ -6,9 +6,10 @@ import { MessageCircleMore, Phone } from "lucide-react";
 
 export default function Navbar() {
   return (
-    <header className="h-24 text-[15px] fixed top-0 left-0 w-full flex flex-col gap-2 bg-[var(--bgcolor)] z-50">
-      <div className="bg-[var(--bg1-color)] text-[var(--bg-color1)] w-full ">
-        <div className=" mx-auto flex justify-between items-center  px-12">
+    <header className="h-24 text-[15px] fixed top-0 left-0 w-full flex flex-col gap-2 bg-[var(--main-color2)] z-50 shadow-sm">
+      {/* -- Top nav bar -- */}
+      <div className="bg-[var(--main-color)] text-[var(--text-color)] w-full ">
+        <div className=" container mx-auto flex justify-between items-center  px-12">
           <p className="text-[10px] ">mcstechnology.in | Mob: +91-9315973373</p>
           <div className="flex gap-2">
             <a href="tel:+917065995901">
@@ -30,7 +31,7 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-
+      {/* -- Top nav bar End-- */}
       <nav className="px-3.5 flex items-center justify-between w-full max-w-7xl mx-auto ">
         {/* Logo */}
         <div className="flex items-center gap-x-3 relative">
