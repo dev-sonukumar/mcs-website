@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bdr {
+  border: 1px solid red;
+}
+
+:root {
+  --main-color: #e6b905;
+  --main2-color: #ca8a04;
+  --secondary-color: #097969;
+  --secondary2-color: #06594f;
+  --navbg-color: #d3f1df;
+  --bg-color: #111;
+  --bg1-color: #85a98f;
+  --bg2-color: #5a6c57;
+  --bgcolor: #e4f5ff;
+  --bgcolor1: #c3e8fd;
+  --bgcolor2: #93d7ff;
+  --bgcolor3: #b4e681;
+  --bgcolor4: #0000ff;
+  --bgcolor5: #000000;
+}
+
+body {
+  @apply bg-[#111] text-[#111] font-inter;
+}
+
+@layer components {
+  .sub-menu {
+    @apply absolute top-[4.2rem] p-[15px] rounded-[6px] origin-[50%_-170px] backdrop-blur bg-white/[0.04];
+  }
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex items-center;
+  }
+  .flex-center-between {
+    @apply flex items-center justify-between;
+  }
+}
