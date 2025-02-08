@@ -15,7 +15,7 @@ export const Menus = [
     name: "Home",
     desc: "Welcome to the homepage",
     icon: PanelsTopLeft,
-    path: "/home",
+    path: "/",
     gridCols: 1,
   },
   {
@@ -24,31 +24,37 @@ export const Menus = [
     subMenu: [
       {
         name: "BIS",
-        desc: "Testing Services",
-        icon: ChevronRight,
+
+        // icon: ChevronRight,
+        icon: PanelsTopLeft,
+        desc: "Responsive design",
         path: "/services/bis",
       },
       {
         name: "BEE",
-        desc: "Responsive design",
+
         icon: PanelsTopLeft,
+        desc: "Responsive design",
         path: "/services/bee",
       },
       {
         name: "WPC",
-        desc: "Responsive design",
+
         icon: PanelsTopLeft,
+        desc: "Responsive design",
         path: "/services/wpc",
       },
       {
         name: "ISI",
-        desc: "Responsive design",
+
         icon: PanelsTopLeft,
+        desc: "Responsive design",
         path: "/services/isi",
       },
       {
         name: "TEC",
         desc: "Responsive design",
+
         icon: PanelsTopLeft,
         path: "/services/tec",
       },

@@ -28,7 +28,7 @@ const Hero = () => {
               <a href="tel:+917065995901">
                 <button
                   aria-label="Call Now"
-                  className="bg-[var(--main-color)] p-3 shadow rounded-xl flex items-center text-white hover:bg-[var(--main-color2)] hover:text-[var(--color5)] transition-all duration-200 font-bold animate-bounce"
+                  className="bg-[var(--main-color)] p-3 shadow rounded-xl flex items-center text-white hover:bg-gray-300 hover:text-[var(--color5)] transition-all duration-200 font-bold animate-bounce"
                 >
                   <Phone
                     className="mr-2 transition-transform duration-200"

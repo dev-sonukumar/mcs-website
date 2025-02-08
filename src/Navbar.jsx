@@ -66,7 +66,7 @@ export default function Navbar() {
               </a>
               </div> */}
           {/* Mobile Menu */}
-          <div className="lg:hidden">
+          <div className="lg:hidden z-50">
             <MobMenu Menus={Menus} />
           </div>
         </nav>
