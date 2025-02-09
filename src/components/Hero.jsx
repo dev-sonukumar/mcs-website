@@ -2,7 +2,7 @@ import { Phone } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="bg-[url(../src/assets/bg/bg2.jpg)] bg-no-repeat ">
+    <section className="bg-[url(../src/assets/bg/bg2.jpg)] bg-no-repeat  ">
       <div className="w-full mt-10 md:mt-0  ">
         <div className="container mx-auto md:h-[50vh]  lg:h-[60vh]  flex justify-center items-center ">
           <div className=" px-4 sm:px-6 lg:px-8 w-[90%] ">
@@ -17,11 +17,17 @@ const Hero = () => {
                 Certification Provider Company in Delhi, India
               </h1>
               <h4 className="text-base sm:text-lg md:text-xl text-gray-600 max-w-[60rem]">
-                We are an Indian firm specializing in BIS Certification, LMPC
-                Certificate, EPR, and various other certifications that will
-                help you enter or sell in the Indian market at a reasonable
-                price. Our expert team ensures a smooth and hassle-free
-                certification process, making compliance quick and
+                We are an Indian firm specializing in{" "}
+                <span className="text-[var(--main-color)]">
+                  BIS, LMPC, EPR Certificate
+                </span>
+                , and{" "}
+                <span className="text-[var(--main-color)]">
+                  various other certifications
+                </span>{" "}
+                that will help you enter or sell in the Indian market at a
+                reasonable price. Our expert team ensures a smooth and
+                hassle-free certification process, making compliance quick and
                 cost-effective.
               </h4>
 

@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { bis } from "../utils/ImportImage"; // Ensure correct import
-import { div } from "framer-motion/client";
+import { bis, bee, wpc, isi, epr, tec } from "../utils/ImportImage";
 
 const OurServices = () => {
   const [loading, setLoading] = useState(true);
@@ -12,42 +11,42 @@ const OurServices = () => {
       description:
         'Ministry of Electronics & Information Technology (MeitY) has notified "Electronics and Information...',
       path: "/bis",
-      image: bis, // Use the imported image correctly
+      image: bis, 
     },
     {
       title: "BEE",
       description:
         "We help our clients get BEE labeling on their products. This labeling is given by Bureau of energy...",
       path: "/service2",
-      image: bis, // Replace with correct imported image if needed
+      image: bee, 
     },
     {
       title: "WPC",
       description:
         "Equipment Type Approval (ETA) is an approval that has to be obtained from WPC before importing...",
       path: "/service3",
-      image: "https://via.placeholder.com/400x200",
+      image: wpc,
     },
     {
       title: "ISI",
       description:
         "Bureau of Indian Standards (BIS) offers an ISI Marking scheme for all products...",
       path: "/service4",
-      image: "https://via.placeholder.com/400x200",
+      image: isi,
     },
     {
       title: "TEC",
       description:
         "TEC refers to Telecom Engineering Centre, The Department of...",
       path: "/service5",
-      image: "https://via.placeholder.com/400x200",
+      image: tec,
     },
     {
       title: "EPR",
       description:
         "We at MCS Technology Inc, are providing end-to-end E-waste management...",
       path: "/service6",
-      image: "https://via.placeholder.com/400x200",
+      image: epr,
     },
   ];
 
@@ -64,16 +63,19 @@ const OurServices = () => {
         <h2 className="text-2xl font-bold mb-6 text-center">Our Services</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <div key={index} className="bg-white p-4 rounded-lg shadow-md">
+            <div
+              key={index}
+              className="bg-white hover:shadow-xl transition-all p-4 rounded-lg shadow-md"
+            >
               {loading ? (
-                <div className="w-full h-40 bg-[var(--card-color)] animate-pulse rounded-t-lg mb-4"></div>
+                <div className="w-full  h-60 bg-[var(--card-color)] animate-pulse rounded-t-lg mb-4"></div>
               ) : (
-                <div className="w-full h-40 rounded-lg flex justify-center items-center">
+                <div className="w-full  rounded-lg flex justify-center items-center overflow-hidden">
                   <img
                     src={service.image}
                     alt={service.title}
                     loading="lazy"
-                    className="h-[120px]"
+                    className=" h-60"
                   />
                 </div>
               )}

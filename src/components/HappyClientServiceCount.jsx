@@ -59,17 +59,20 @@ const StatsCounter = () => {
     // Start counting when the component is in view
     if (inView) {
       stats.forEach((stat) => {
-        increment(stat.value, stat.key); // Use stat.key instead of label for the state key
+        increment(stat.value, stat.key);
       });
     }
 
     return () => {
-      observer.disconnect(); // Clean up the observer when the component is unmounted
+      observer.disconnect();
     };
-  }, [inView]); // Only re-run when the `inView` state changes
+  }, [inView]);
 
   return (
-    <div ref={statsRef} className="flex justify-center items-center p-8">
+    <div
+      ref={statsRef}
+      className="flex justify-center items-center p-8 lg:mt-12  lg:my-12"
+    >
       <div className="container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl w-full px-0 lg:px-5 ">
         {stats.map((stat, index) => (
           <div
@@ -88,7 +91,7 @@ const StatsCounter = () => {
               // Actual Content
               <>
                 <div className="text-5xl font-bold">{stat.icon}</div>
-                <div className="text-4xl font-extrabold text-blue-500 mt-5">
+                <div className="text-4xl font-extrabold text-[var(--main-color)] mt-5">
                   {count[stat.key]}+
                 </div>
                 <h3 className="text-xl font-semibold text-gray-700 mt-2">
