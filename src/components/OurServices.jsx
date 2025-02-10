@@ -11,14 +11,14 @@ const OurServices = () => {
       description:
         'Ministry of Electronics & Information Technology (MeitY) has notified "Electronics and Information...',
       path: "/bis",
-      image: bis, 
+      image: bis,
     },
     {
       title: "BEE",
       description:
         "We help our clients get BEE labeling on their products. This labeling is given by Bureau of energy...",
       path: "/service2",
-      image: bee, 
+      image: bee,
     },
     {
       title: "WPC",

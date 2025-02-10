@@ -2,6 +2,7 @@ import OurServices from "../components/OurServices";
 import Hero from "../components/Hero";
 import HappyClientServicesCount from "../components/HappyClientServiceCount";
 import ImageSlider from "./ImageSlider";
+import Post from "../components/posts/post";
 // import PostPage from "./PostPage";
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
       <HappyClientServicesCount />
       <ImageSlider />
       {/* <PostPage /> */}
+      <Post />
     </div>
   );
 };

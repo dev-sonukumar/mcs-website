@@ -2,26 +2,27 @@ import { Link } from "react-router";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-8">
+    <footer className="bg-gray-800 text-white py-8 ">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 text-left ">
           {/* Column 1: About Us */}
           <div className="mb-8 sm:mb-0">
             <h3 className="text-lg font-semibold mb-4">About Us</h3>
             <p className="text-sm text-gray-300">
-              We are a company dedicated to providing the best service to our
-              customers. Our mission is to make your life easier with our
-              innovative solutions.
+              MCS Technology Inc is a New Delhi (India) based certified service
+              provider, Our services are praised for their reasonable charges
+              and clarification of procedure & policies before starting the
+              work.
             </p>
           </div>
 
           {/* Column 2: Quick Links */}
-          <div className="mb-8 sm:mb-0">
+          <div className="mb sm:mb-0 lg:pl-32 ">
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="text-sm text-gray-300">
+            <ul className="text-sm text-gray-300 s">
               <li className="mb-2">
                 <Link
-                  href="#"
+                  to="/"
                   className="hover:text-gray-400 transition duration-300"
                 >
                   Home
@@ -29,7 +30,7 @@ const Footer = () => {
               </li>
               <li className="mb-2">
                 <Link
-                  href="#"
+                  to="/services"
                   className="hover:text-gray-400 transition duration-300"
                 >
                   Services
@@ -37,7 +38,7 @@ const Footer = () => {
               </li>
               <li className="mb-2">
                 <Link
-                  href="#"
+                  to="/about"
                   className="hover:text-gray-400 transition duration-300"
                 >
                   About
@@ -45,7 +46,7 @@ const Footer = () => {
               </li>
               <li className="mb-2">
                 <Link
-                  href="#"
+                  to="/contact"
                   className="hover:text-gray-400 transition duration-300"
                 >
                   Contact
@@ -59,14 +60,17 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
             <ul className="text-sm text-gray-300">
               <li className="mb-2">
-                <span className="font-semibold">Address:</span> 123 Main St,
-                City, Country
+                <span className="font-semibold">Address:</span> PLOT NO -320, KH
+                . NO -11/5, Near By Dwarka more metro station, Pillar No 789,
+                Kakrola Housing Complex, New Delhi -110078, India
               </li>
               <li className="mb-2">
-                <span className="font-semibold">Phone:</span> +1 234 567 890
+                <span className="font-semibold">Phone:</span> +91-7065995901,
+                7011310361
               </li>
               <li className="mb-2">
-                <span className="font-semibold">Email:</span> info@example.com
+                <span className="font-semibold">Email:</span>{" "}
+                sultan@mcstechnology.in, services@mcstechnology.in
               </li>
             </ul>
           </div>

@@ -7,6 +7,7 @@ import NotFound from "./Pages/NotFound.jsx";
 import Bis from "./Pages/Bis.jsx";
 import Home from "./Pages/Home.jsx";
 import Footer from "./Footer.jsx";
+import Post from "./components/posts/post.jsx";
 
 // Layout Component to Avoid Repeating Navbar & Footer
 const Layout = () => (
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
       { index: true, element: <Home /> }, // Default route
       { path: "/", element: <Home /> },
       { path: "services", element: <Services /> },
-      { path: "services/bis", element: <Bis /> },
+      { path: "services/:post", element: <Post /> },
       { path: "*", element: <NotFound /> }, // Catch-all route
     ],
   },
