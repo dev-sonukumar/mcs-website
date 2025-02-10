@@ -17,6 +17,24 @@ const asset15 = "/src/assets/bg/asset15.svg";
 const asset16 = "/src/assets/bg/asset16.svg";
 const asset17 = "/src/assets/bg/asset17.svg";
 const asset18 = "/src/assets/bg/asset18.svg";
+const brand1 = "/src/assets/brand/brand1.png";
+const brand2 = "/src/assets/brand/brand2.png";
+const brand3 = "/src/assets/brand/brand3.png";
+const brand4 = "/src/assets/brand/brand4.png";
+const brand5 = "/src/assets/brand/brand5.png";
+const brand6 = "/src/assets/brand/brand6.png";
+const brand7 = "/src/assets/brand/brand7.png";
+const brand8 = "/src/assets/brand/brand8.png";
+const brand9 = "/src/assets/brand/brand9.png";
+const brand10 = "/src/assets/brand/brand10.png";
+const brand11 = "/src/assets/brand/brand11.png";
+const brand12 = "/src/assets/brand/brand12.png";
+const brand13 = "/src/assets/brand/brand13.png";
+const brand14 = "/src/assets/brand/brand14.png";
+const brand15 = "/src/assets/brand/brand15.png";
+const brand16 = "/src/assets/brand/brand16.png";
+const brand17 = "/src/assets/brand/brand17.png";
+
 export {
   bis,
   bee,
@@ -37,4 +55,21 @@ export {
   asset16,
   asset17,
   asset18,
+  brand1,
+  brand2,
+  brand3,
+  brand4,
+  brand5,
+  brand6,
+  brand7,
+  brand8,
+  brand9,
+  brand10,
+  brand11,
+  brand12,
+  brand13,
+  brand14,
+  brand15,
+  brand16,
+  brand17,
 };

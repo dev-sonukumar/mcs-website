@@ -71,8 +71,11 @@ const StatsCounter = () => {
   return (
     <div
       ref={statsRef}
-      className="flex justify-center items-center p-8 lg:mt-12  lg:my-12"
+      className="flex flex-col justify-center items-center p-8 lg:mt-12  lg:my-12"
     >
+      <h2 className="font-bold text-2xl md:text-3xl mb-10">
+        Experience and Expertize
+      </h2>
       <div className="container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl w-full px-0 lg:px-5 ">
         {stats.map((stat, index) => (
           <div

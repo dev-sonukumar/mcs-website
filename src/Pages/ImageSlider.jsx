@@ -1,7 +1,28 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { asset11, bee, bis, epr, isi, tec, wpc } from "../utils/ImportImage";
+import {
+  asset11,
+  bee,
+  bis,
+  brand1,
+  brand10,
+  brand11,
+  brand12,
+  brand13,
+  brand14,
+  brand15,
+  brand16,
+  brand17,
+  brand2,
+  brand3,
+  brand4,
+  brand5,
+  brand6,
+  brand7,
+  brand8,
+  brand9,
+} from "../utils/ImportImage";
 
 const ImageSlider = () => {
   // Carousel settings
@@ -34,15 +55,31 @@ const ImageSlider = () => {
   };
 
   // Image URLs
-  const images = [bis, bee, wpc, isi, tec, epr];
+  const images = [
+    brand1,
+    brand2,
+    brand3,
+    brand4,
+    brand5,
+    brand6,
+    brand7,
+    brand8,
+    brand9,
+    brand10,
+    brand11,
+    brand12,
+    brand13,
+    brand14,
+    brand15,
+    brand16,
+    brand17,
+  ];
 
   return (
     <div className="bg-[var(--main-color2)]  my-12">
       <div className="relative container mx-auto px-4 py-8 ">
-        <img src={asset11} className="absolute left-10 hidden lg:block" />
-        <h2 className="text-2xl font-bold mb-6 text-center">
-          Featured Projects
-        </h2>
+        {/* <img src={asset11} className="absolute left-10 hidden lg:block" /> */}
+        <h2 className="text-2xl font-bold mb-6 text-center">Brands</h2>
 
         <Slider {...settings}>
           {images.map((image, index) => (
@@ -53,14 +90,6 @@ const ImageSlider = () => {
                   alt={`Slide ${index + 1}`}
                   className="w-full h-48 object-contain"
                 />
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold">
-                    Card Title {index + 1}
-                  </h3>
-                  <p className="text-gray-600">
-                    This is a sample description for the card.
-                  </p>
-                </div>
               </div>
             </div>
           ))}
