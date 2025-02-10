@@ -12,5 +12,7 @@ export default {
       lg: { min: "925px" },
     },
   },
-  plugins: [],
+  plugins: [
+    
+  ],
 };

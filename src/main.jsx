@@ -4,10 +4,12 @@ import "./index.css";
 import Navbar from "./Navbar.jsx";
 import Services from "./Pages/Services.jsx";
 import NotFound from "./Pages/NotFound.jsx";
-import Bis from "./Pages/Bis.jsx";
+// import Bis from "./Pages/Bis.jsx";
 import Home from "./Pages/Home.jsx";
 import Footer from "./Footer.jsx";
 import Post from "./components/posts/post.jsx";
+import FAQ from "./Pages/Faq.jsx";
+import ContactUs from "./Pages/ContactUS.jsx";
 
 // Layout Component to Avoid Repeating Navbar & Footer
 const Layout = () => (
@@ -27,6 +29,8 @@ const router = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "services", element: <Services /> },
       { path: "services/:post", element: <Post /> },
+      { path: "faqs", element: <FAQ /> },
+      { path: "contact", element: <ContactUs /> },
       { path: "*", element: <NotFound /> }, // Catch-all route
     ],
   },

@@ -1,10 +1,7 @@
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { bis, bee, wpc, isi, epr, tec } from "../utils/ImportImage";
 
 const OurServices = () => {
-  const [loading, setLoading] = useState(true);
-
   const services = [
     {
       title: "BIS",
@@ -50,13 +47,6 @@ const OurServices = () => {
     },
   ];
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <div className="bg-[var(--main-color2)] bg-[url(../../assets/bg/asset10.svg)]">
       <div className="container mx-auto px-4 py-8">
@@ -67,44 +57,26 @@ const OurServices = () => {
               key={index}
               className="bg-white hover:shadow-xl transition-all p-4 rounded-lg shadow-md"
             >
-              {loading ? (
-                <div className="w-full  h-60 bg-[var(--card-color)] animate-pulse rounded-t-lg mb-4"></div>
-              ) : (
-                <div className="w-full  rounded-lg flex justify-center items-center overflow-hidden">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    loading="lazy"
-                    className=" h-60"
-                  />
-                </div>
-              )}
-
-              {loading ? (
-                <div className="h-6 bg-gray-300 animate-pulse rounded mb-2 "></div>
-              ) : (
-                <h3 className="text-black text-xl font-extrabold mb-2 text-center">
-                  {service.title}
-                </h3>
-              )}
-
-              {loading ? (
-                <>
-                  <div className="h-4 bg-gray-300 animate-pulse rounded mb-2"></div>
-                  <div className="h-4 bg-gray-300 animate-pulse rounded mb-2"></div>
-                  <div className="h-4 bg-gray-300 animate-pulse rounded mb-2"></div>
-                </>
-              ) : (
-                <p className="text-gray-600">
-                  {service.description}
-                  <Link
-                    to={service.path}
-                    className="text-blue-500 hover:underline ml-2"
-                  >
-                    Read More
-                  </Link>
-                </p>
-              )}
+              <div className="w-full rounded-lg flex justify-center items-center overflow-hidden">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  loading="lazy"
+                  className="h-60"
+                />
+              </div>
+              <h3 className="text-black text-xl font-extrabold mb-2 text-center">
+                {service.title}
+              </h3>
+              <p className="text-gray-600">
+                {service.description}
+                <Link
+                  to={service.path}
+                  className="text-blue-500 hover:underline ml-2"
+                >
+                  Read More
+                </Link>
+              </p>
             </div>
           ))}
         </div>
