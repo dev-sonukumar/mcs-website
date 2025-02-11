@@ -13,7 +13,7 @@ const Home = () => {
       <HappyClientServicesCount />
       <ImageSlider />
       {/* <PostPage /> */}
-      <Post />
+      {/* <Post /> */}
     </div>
   );
 };
