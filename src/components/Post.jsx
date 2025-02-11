@@ -1,5 +1,5 @@
 import React from "react";
-import { bis, isi } from "../../utils/ImportImage";
+import { bis, isi } from "../utils/ImportImage";
 
 const data = [
   {

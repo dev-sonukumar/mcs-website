@@ -10,6 +10,7 @@ import Footer from "./Footer.jsx";
 // import Post from "./components/posts/post.jsx";
 import FAQ from "./Pages/Faq.jsx";
 import ContactUs from "./Pages/ContactUS.jsx";
+import Post from "./components/Post.jsx";
 
 // Layout Component to Avoid Repeating Navbar & Footer
 const Layout = () => (
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
       { index: true, element: <Home /> }, // Default route
       { path: "/", element: <Home /> },
       { path: "services", element: <Services /> },
-      // { path: "services/:post", element: <Post /> },
+      { path: "services/:post", element: <Post /> },
       { path: "faqs", element: <FAQ /> },
       { path: "contact", element: <ContactUs /> },
       { path: "*", element: <NotFound /> }, // Catch-all route
