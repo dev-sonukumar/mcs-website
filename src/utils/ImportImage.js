@@ -1,5 +1,5 @@
-const bis = "./src/assets/service/bis.JPG";
-const bee = "./src/assets/service/bee.JPG";
+const bis = "src/assets/service/bis.JPG";
+const bee = "src/assets/service/bee.JPG";
 const wpc = "./src/assets/service/wpc.JPG";
 const isi = "./src/assets/service/isi.JPG";
 const epr = "./src/assets/service/epr.JPG";
