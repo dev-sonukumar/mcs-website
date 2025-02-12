@@ -7,7 +7,7 @@ const Faq = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const api = "https://mcs-backend-b5kl.onrender.com/faqs";
+  const api = "https://mcs-backend-zrpv.onrender.com/bisfaqs";
 
   useEffect(() => {
     axios
