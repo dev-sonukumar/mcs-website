@@ -1,8 +1,10 @@
 import { Menus } from "./utils"; // Assuming Menus is in utils
-import Logo from "./assets/logo.png";
+
 import DesktopMenu from "./components/DesktopMenu";
 import MobMenu from "./components/MobMenu";
 import { MessageCircleMore, Phone } from "lucide-react";
+import { logo } from "./utils/ImportImage";
+
 
 export default function Navbar() {
   return (
@@ -37,7 +39,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex items-center gap-x-3 relative">
             <img
-              src={Logo}
+              src={logo}
               alt="MCS Technology Logo"
               className="p-1 w-[9rem] h-12 shadow rounded-xl transition-all duration-200"
             />
