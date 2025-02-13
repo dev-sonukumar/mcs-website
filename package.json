@@ -10,7 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.6",
+    "@radix-ui/react-separator": "^1.1.2",
+    "@radix-ui/react-slot": "^1.1.2",
+    "@radix-ui/react-tooltip": "^1.1.8",
     "axios": "^1.7.9",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "framer-motion": "^12.4.1",
     "lucide-react": "^0.445.0",
     "react": "^18.3.1",
@@ -20,7 +26,9 @@
     "react-slick": "^0.30.3",
     "react-transition-group": "^4.4.5",
     "slick-carousel": "^1.8.1",
-    "swiper": "^11.2.2"
+    "swiper": "^11.2.2",
+    "tailwind-merge": "^3.0.1",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",

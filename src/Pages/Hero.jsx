@@ -13,11 +13,11 @@ const Hero = () => {
             <>
               {/* <img src={bg} className=" absolute bg-right" /> */}
 
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-400 mb-4 hover:text-[var(--main2-color)] transition-colors duration-300 ">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-400 mb-4 hover:text-[var(--main2-color)] transition-colors duration-300 ">
                 Best <span className="text-[var(--main-color)]">BIS, EPR</span>{" "}
                 Certification Provider Company in Delhi, India
               </h1>
-              <h4 className="text-base sm:text-lg md:text-xl text-gray-600 max-w-[60rem]">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-gray-600 max-w-[60rem]">
                 We are an Indian firm specializing in{" "}
                 <span className="text-[var(--main-color)]">
                   BIS, LMPC, EPR Certificate
@@ -30,14 +30,14 @@ const Hero = () => {
                 reasonable price. Our expert team ensures a smooth and
                 hassle-free certification process, making compliance quick and
                 cost-effective.
-              </h4>
+              </p>
 
               {/* Call Button */}
               <div className="inline-block h-[50px] mt-10">
                 <a href="tel:+917065995901">
                   <button
                     aria-label="Call Now"
-                    className="bg-[var(--main-color)] p-3 shadow rounded-xl flex items-center text-white hover:bg-gray-300 hover:text-[var(--color5)] transition-all duration-200 font-bold animate-bounce"
+                    className="bg-[var(--main-color)] p-3 shadow rounded-xl flex items-center text-white hover:bg-gray-300 hover:text-[var(--color5)] transition-all  font-bold animate-bounce"
                   >
                     <Phone
                       className="mr-2 transition-transform duration-200"
