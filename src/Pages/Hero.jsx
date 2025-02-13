@@ -1,16 +1,17 @@
 import { Phone } from "lucide-react";
+import { asset18, bg } from "../utils/ImgUtils";
 
 const Hero = () => {
   return (
-    <section className="bg-[url(../src/assets/bg/bg2.jpg)] bg-no-repeat  ">
+    <section
+      className="bg-no-repeat bg-cover"
+      style={{ backgroundImage: `url(${bg})` }}
+    >
       <div className="w-full mt-10 md:mt-0  ">
         <div className="container mx-auto md:h-[50vh]  lg:h-[60vh]  flex justify-center items-center ">
           <div className=" px-4 sm:px-6 lg:px-8 w-[90%] ">
             <>
-              {/* <img
-              src="../src/assets/bg/asset14.svg "
-              className=" absolute bg-right" 
-            /> */}
+              {/* <img src={bg} className=" absolute bg-right" /> */}
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-400 mb-4 hover:text-[var(--main2-color)] transition-colors duration-300 ">
                 Best <span className="text-[var(--main-color)]">BIS, EPR</span>{" "}
@@ -46,10 +47,7 @@ const Hero = () => {
                   </button>
                 </a>
               </div>
-              <img
-                src="../src/assets/bg/asset18.svg "
-                className="lg:absolute "
-              />
+              <img src={asset18} className="lg:absolute " />
             </>
           </div>
         </div>

@@ -1,10 +1,8 @@
-import { Menus } from "./utils"; // Assuming Menus is in utils
-
-import DesktopMenu from "./components/DesktopMenu";
-import MobMenu from "./components/MobMenu";
 import { MessageCircleMore, Phone } from "lucide-react";
-import { logo } from "./utils/ImportImage";
-
+import MobMenu from "../components/common/MobMenu";
+import DesktopMenu from "../components/common/DesktopMenu";
+import { logo } from "../utils/ImgUtils";
+import { Menus } from "../utils/MenuUtils";
 
 export default function Navbar() {
   return (

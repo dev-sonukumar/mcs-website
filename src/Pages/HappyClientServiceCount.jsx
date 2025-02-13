@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-const StatsCounter = () => {
+const HappyClientServicesCount = () => {
   // Stats configuration
   const stats = [
     { label: "Projects Executed", key: "projects", value: 250, icon: "📊" },
@@ -110,4 +110,4 @@ const StatsCounter = () => {
   );
 };
 
-export default StatsCounter;
+export default HappyClientServicesCount;

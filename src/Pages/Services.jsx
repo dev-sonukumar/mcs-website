@@ -1,4 +1,5 @@
-import OurServices from "../components/OurServices";
+import OurServices from "./OurServices";
+
 const Services = () => {
   return (
     <div>

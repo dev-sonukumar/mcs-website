@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { bis, bee, wpc, isi, epr, tec } from "../utils/ImportImage";
+import { bee, wpc, isi, epr, tec, bis } from "../utils/ImgUtils";
 
 const OurServices = () => {
   const services = [
@@ -48,7 +48,7 @@ const OurServices = () => {
   ];
 
   return (
-    <div className="bg-[var(--main-color2)] bg-[url(../../assets/bg/asset10.svg)]">
+    <div className="bg-[var(--main-color2)] ">
       <div className="container mx-auto px-4 py-8">
         <h2 className="text-2xl font-bold mb-6 text-center">Our Services</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

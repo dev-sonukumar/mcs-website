@@ -2,7 +2,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {
- 
   brand1,
   brand10,
   brand11,
@@ -20,7 +19,7 @@ import {
   brand7,
   brand8,
   brand9,
-} from "../utils/ImportImage";
+} from "../utils/ImgUtils";
 
 const ImageSlider = () => {
   // Carousel settings
