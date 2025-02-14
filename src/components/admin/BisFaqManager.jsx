@@ -36,24 +36,23 @@ const BisFaqManager = () => {
   };
 
   // Edit FAQ
+
   const handleEditFAQ = async (e) => {
     e.preventDefault();
-    if (!editingFAQ) return;
+    if (!editingFAQ?._id) return alert("Invalid FAQ ID!");
 
     try {
-      const response = await axios.put(
-        `${API_URL}/${editingFAQ._id}`,
-        editingFAQ
-      );
+      const response = await axios.put(`${API_URL}/${editingFAQ._id}`, {
+        question: editingFAQ.question,
+        answer: editingFAQ.answer,
+      });
 
-      // Update state with the new data from the response
       setFaqs(
         faqs.map((faq) => (faq._id === editingFAQ._id ? response.data : faq))
       );
-
       setEditingFAQ(null);
     } catch (err) {
-      console.error("Error editing FAQ:", err);
+      console.error("Error updating FAQ:", err);
     }
   };
 

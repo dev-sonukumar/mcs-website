@@ -31,7 +31,7 @@ const Faq = () => {
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-indigo-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-4xl font-bold text-center text-gray-900 mb-8">
-          Frequently Asked Questions
+          Frequently Asked Questions For Bis
         </h1>
         <div className="space-y-4">
           {loading ? (
