@@ -21,7 +21,7 @@ const menu = [
     name: "FAQ",
     path: "faq",
     children: [
-      { name: "BIS", path: "faq-bis" },
+      { name: "BIS", path: "bisfaq" },
       { name: "ETA", path: "faq-eta" },
       { name: "EPR", path: "faq-epr" },
     ],

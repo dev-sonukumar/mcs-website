@@ -4,6 +4,7 @@ import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import Sidebar from "@/components/ui/sidebar";
 import ServicesManager from "@/components/admin/ServicesManager";
 import PostsManager from "@/components/admin/PostsManager";
+import BisFaqManager from "@/components/admin/BisFaqManager";
 import Dashboard from "@/components/admin/Dashboard";
 import { Menu, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -30,10 +31,10 @@ const AdminPanel = () => {
   };
 
   return (
-    <div className="flex h-screen ">
+    <div className="flex h-screen">
       {/* Mobile Sidebar */}
       <Sheet>
-        <SheetTrigger className="lg:hidden fixed top-4 left-4 font-bold ">
+        <SheetTrigger className="lg:hidden fixed top-4 left-4 font-bold">
           <Menu />
         </SheetTrigger>
         <SheetContent side="left" className="w-64 p-4 flex flex-col h-full">
@@ -81,6 +82,7 @@ const AdminPanel = () => {
         {activeSection === "posts" && (
           <PostsManager posts={posts} setPosts={setPosts} />
         )}
+        {activeSection === "bisfaq" && <BisFaqManager />}
       </main>
     </div>
   );

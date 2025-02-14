@@ -12,8 +12,9 @@ import NotFound from "./Pages/NotFound";
 import AdminPanel from "./Pages/admin/AdminPanel";
 import Dashboard from "./components/admin/Dashboard";
 import AdminProfile from "./Pages/admin/AdminProfile";
+import BisFaqManager from "./components/admin/BisFaqManager";
 
-// Layout Component to Avoid Repeating Navbar & Footer
+// Layout Component for Public Pages
 const Layout = () => (
   <div>
     <Navbar />
@@ -22,13 +23,20 @@ const Layout = () => (
   </div>
 );
 
+// Layout for Admin Panel (Allows Nested Routes)
+const AdminLayout = () => (
+  <div>
+    <AdminPanel />
+    <Outlet /> {/* This enables child routes inside /admin */}
+  </div>
+);
+
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />, // Shared Layout
+    element: <Layout />, // Public Layout with Navbar & Footer
     children: [
-      { index: true, element: <Home /> }, // Default route
-      { path: "/", element: <Home /> },
+      { index: true, element: <Home /> },
       { path: "services", element: <Services /> },
       { path: "services/:post", element: <Post /> },
       { path: "faqs", element: <Faq /> },
@@ -38,11 +46,12 @@ const router = createBrowserRouter([
   },
   {
     path: "/admin",
-    element: <AdminPanel />,
-  },
-  {
-    path: "/adminprofile",
-    element: <AdminProfile />,
+    element: <AdminLayout />, // Admin Panel Layout
+    children: [
+      { index: true, element: <Dashboard /> }, // Default admin route
+      { path: "profile", element: <AdminProfile /> },
+      { path: "bisfaq", element: <BisFaqManager /> },
+    ],
   },
 ]);
 
