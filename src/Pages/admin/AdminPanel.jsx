@@ -72,8 +72,6 @@ const AdminPanel = () => {
           <LogOut /> Logout
         </Button>
       </aside>
-
-      {/* Main Content */}
       <main className="flex-1 p-6 overflow-auto">
         {activeSection === "dashboard" && <Dashboard />}
         {activeSection === "services" && (
@@ -84,6 +82,8 @@ const AdminPanel = () => {
         )}
         {activeSection === "bisfaq" && <BisFaqManager />}
       </main>
+
+      {/* Main Content */}
     </div>
   );
 };

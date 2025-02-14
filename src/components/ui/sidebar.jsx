@@ -5,7 +5,6 @@ import {
   ChevronUp,
   FolderCog,
   FileText,
-  FileQuestion,
   FileQuestionIcon,
   LayoutDashboard,
   StickyNote,

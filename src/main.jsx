@@ -27,7 +27,7 @@ const Layout = () => (
 const AdminLayout = () => (
   <div>
     <AdminPanel />
-    <Outlet /> {/* This enables child routes inside /admin */}
+    {/* <Outlet /> This enables child routes inside /admin */}
   </div>
 );
 

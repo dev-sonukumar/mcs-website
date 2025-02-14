@@ -1,4 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Home, Settings, User, BarChart2, Shield } from "lucide-react";
 import AdminProfile from "@/Pages/admin/AdminProfile";
