@@ -10,6 +10,8 @@ import Faq from "./Pages/Faq";
 import ContactUs from "./Pages/ContactUS";
 import NotFound from "./Pages/NotFound";
 import AdminPanel from "./Pages/admin/AdminPanel";
+import Dashboard from "./components/admin/Dashboard";
+import AdminProfile from "./Pages/admin/AdminProfile";
 
 // Layout Component to Avoid Repeating Navbar & Footer
 const Layout = () => (
@@ -37,11 +39,10 @@ const router = createBrowserRouter([
   {
     path: "/admin",
     element: <AdminPanel />,
-    children: [
-      { path: "dashboard", element: <div>Admin Dashboard</div> },
-      { path: "settings", element: <div>Admin Settings</div> },
-      { path: "*", element: <div>Admin NotFound</div> },
-    ],
+  },
+  {
+    path: "/adminprofile",
+    element: <AdminProfile />,
   },
 ]);
 

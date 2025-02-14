@@ -4,12 +4,13 @@ import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import Sidebar from "@/components/ui/sidebar";
 import ServicesManager from "@/components/admin/ServicesManager";
 import PostsManager from "@/components/admin/PostsManager";
+import Dashboard from "@/components/admin/Dashboard";
 import { Menu, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { logo } from "@/utils/ImgUtils";
 
 const AdminPanel = () => {
-  const [activeSection, setActiveSection] = useState("services");
+  const [activeSection, setActiveSection] = useState("dashboard");
   const navigate = useNavigate();
 
   const [services, setServices] = useState([
@@ -73,9 +74,11 @@ const AdminPanel = () => {
 
       {/* Main Content */}
       <main className="flex-1 p-6 overflow-auto">
-        {activeSection === "services" ? (
+        {activeSection === "dashboard" && <Dashboard />}
+        {activeSection === "services" && (
           <ServicesManager services={services} setServices={setServices} />
-        ) : (
+        )}
+        {activeSection === "posts" && (
           <PostsManager posts={posts} setPosts={setPosts} />
         )}
       </main>

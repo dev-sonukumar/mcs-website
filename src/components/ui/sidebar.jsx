@@ -7,12 +7,15 @@ import {
   FileText,
   FileQuestion,
   FileQuestionIcon,
+  LayoutDashboard,
+  StickyNote,
+  ShieldCheck,
 } from "lucide-react";
 
 const menu = [
-  { name: "Dashboard", path: "dashboard", icon: <FolderCog /> },
+  { name: "Dashboard", path: "dashboard", icon: <LayoutDashboard /> },
   { name: "Services", path: "services", icon: <FolderCog /> },
-  { name: "Posts", path: "posts", icon: <FileText /> },
+  { name: "Posts", path: "posts", icon: <StickyNote /> },
   { name: "Blog", path: "blog", icon: <FileText /> },
   {
     name: "FAQ",
@@ -59,14 +62,14 @@ const Sidebar = ({ setActiveSection }) => {
 
             {/* Child Menu (FAQ Submenu) */}
             {item.children && openMenu === item.name && (
-              <ul className="ml-6 mt-2 space-y-1 border-l border-gray-500 pl-3">
+              <ul className="ml-6 mt-2 space-y-1 border-l border-dashed border-gray-500 pl-3">
                 {item.children.map((child, childIndex) => (
                   <li
                     key={childIndex}
-                    className="cursor-pointer hover:text-gray-300 flex items-center gap-2 p-1"
+                    className="cursor-pointer hover:text-gray-300 flex items-center gap-2 p-2 mt-2  rounded-md border"
                     onClick={() => setActiveSection(child.path)}
                   >
-                    └ {child.name}
+                    <ShieldCheck /> {child.name}
                   </li>
                 ))}
               </ul>

@@ -14,8 +14,9 @@ const Hero = () => {
               {/* <img src={bg} className=" absolute bg-right" /> */}
 
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-400 mb-4 hover:text-[var(--main2-color)] transition-colors duration-300 ">
-                Best <span className="text-[var(--main-color)]">BIS, EPR</span>{" "}
-                Certification Provider Company in Delhi, India
+                Best consulting firm for{" "}
+                <span className="text-[var(--main-color)]">BIS, EPR </span> and
+                various other certifications in Delhi, India.
               </h1>
               <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-gray-600 max-w-[60rem]">
                 We are an Indian firm specializing in{" "}
