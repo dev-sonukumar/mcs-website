@@ -2,16 +2,22 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import api_bisfaqs from "@/utils/api";
 
+// Utility function for API call with retries
 const apiCall = async (url, retries = 3) => {
   for (let attempt = 1; attempt <= retries; attempt++) {
     try {
       console.log(`Attempt ${attempt} to fetch FAQs...`);
       const response = await axios.get(url, { timeout: 10000 }); // 10s timeout
+      if (!Array.isArray(response.data))
+        throw new Error("Invalid API response format");
       return response.data;
     } catch (error) {
       if (attempt === retries) {
         console.error("Final request failed:", error.message);
-        throw new Error("Failed to fetch FAQs. Please try again later.");
+        throw new Error(
+          error.response?.data?.message ||
+            "Failed to fetch FAQs. Please try again later."
+        );
       }
       console.warn(`Retrying... (${attempt}/${retries})`);
     }
@@ -42,20 +48,24 @@ const Faq = () => {
     fetchFAQs();
   }, []);
 
-  const toggleFAQ = (index) => {
-    setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
-  };
+  // Debounced search function
+  useEffect(() => {
+    const delaySearch = setTimeout(() => {
+      if (!searchQuery.trim()) {
+        setFilteredFaqs(faqData);
+      } else {
+        const query = searchQuery.toLowerCase();
+        const filtered = faqData.filter(
+          (faq) =>
+            faq.question.toLowerCase().includes(query) ||
+            faq.answer.toLowerCase().includes(query)
+        );
+        setFilteredFaqs(filtered);
+      }
+    }, 300); // 300ms delay for better UX
 
-  const handleSearch = (event) => {
-    const query = event.target.value.toLowerCase();
-    setSearchQuery(query);
-    const filtered = faqData.filter(
-      (faq) =>
-        faq.question.toLowerCase().includes(query) ||
-        faq.answer.toLowerCase().includes(query)
-    );
-    setFilteredFaqs(filtered);
-  };
+    return () => clearTimeout(delaySearch);
+  }, [searchQuery, faqData]);
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-indigo-50 to-purple-100 py-16 px-6">
@@ -73,7 +83,7 @@ const Faq = () => {
           <input
             type="text"
             value={searchQuery}
-            onChange={handleSearch}
+            onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search FAQs..."
             className="w-full max-w-lg px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-md"
           />
@@ -86,18 +96,21 @@ const Faq = () => {
           ) : error ? (
             <p className="text-center text-red-500 text-lg">{error}</p>
           ) : filteredFaqs.length > 0 ? (
-            filteredFaqs.map((item, index) => (
+            filteredFaqs.map((faq, index) => (
               <div
-                key={index}
+                key={faq._id || index} // Use _id if available
                 className="bg-white border border-gray-200 shadow-md rounded-xl overflow-hidden transition-transform transform hover:scale-[1.02] hover:shadow-lg"
               >
                 <button
-                  onClick={() => toggleFAQ(index)}
+                  onClick={() =>
+                    setActiveIndex(activeIndex === index ? null : index)
+                  }
                   aria-expanded={activeIndex === index}
+                  role="button"
                   className="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none"
                 >
                   <h2 className="text-md sm:text-lg md:text-xl font-semibold text-gray-900">
-                    {item.question}
+                    {faq.question}
                   </h2>
                   {/* Icon Toggle */}
                   <div className="flex items-center justify-center p-2">
@@ -129,7 +142,7 @@ const Faq = () => {
                   }`}
                 >
                   <p className="text-gray-700 text-md sm:text-lg leading-relaxed">
-                    {item.answer}
+                    {faq.answer}
                   </p>
                 </div>
               </div>

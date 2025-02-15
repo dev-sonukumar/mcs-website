@@ -31,11 +31,16 @@ const BisFaqManager = () => {
     setLoading(true);
     try {
       const res = await axios.get(api_bisfaqs);
-      const data = Array.isArray(res.data) ? res.data : []; // Ensure data is an array
-      setFaqs(data);
+      console.log("API Response:", res.data); // Debugging output
+
+      const data = res.data;
+
+      // Ensure `faqs` is always an array
+      setFaqs(Array.isArray(data) ? data : []);
     } catch (err) {
       console.error("Error fetching FAQs:", err);
       toast.error("Failed to load FAQs");
+      setFaqs([]); // Prevent mapping over `undefined`
     } finally {
       setLoading(false);
     }
@@ -173,9 +178,7 @@ const BisFaqManager = () => {
               <div className="flex justify-center py-4">
                 <Loader2 className="animate-spin" size={32} />
               </div>
-            ) : faqs.length === 0 ? (
-              <p className="text-gray-500">No FAQs found.</p>
-            ) : (
+            ) : Array.isArray(faqs) && faqs.length > 0 ? (
               <ul className="space-y-4">
                 {faqs.map((faq) => (
                   <Card
@@ -206,6 +209,8 @@ const BisFaqManager = () => {
                   </Card>
                 ))}
               </ul>
+            ) : (
+              <p className="text-gray-500">No FAQs found.</p>
             )}
           </div>
         </CardContent>
