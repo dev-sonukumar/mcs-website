@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import api_bisfaqs from "@/utils/api";
 
 const apiCall = async (url, retries = 3) => {
   for (let attempt = 1; attempt <= retries; attempt++) {
@@ -25,12 +26,10 @@ const Faq = () => {
   const [error, setError] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
 
-  const api = "https://mcs-backend-inoc.onrender.com/bisfaqs";
-
   useEffect(() => {
     const fetchFAQs = async () => {
       try {
-        const data = await apiCall(api);
+        const data = await apiCall(api_bisfaqs);
         setFaqData(data);
         setFilteredFaqs(data);
       } catch (err) {

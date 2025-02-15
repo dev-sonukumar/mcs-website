@@ -17,7 +17,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { toast } from "sonner"; // Using 'sonner' for toasts
 
 const BisFaqManager = () => {
-  const [faqs, setFaqs] = useState([]);
+  const [faqs, setFaqs] = useState([]); // Ensuring it's an array
   const [loading, setLoading] = useState(false);
   const [newFAQ, setNewFAQ] = useState({ question: "", answer: "" });
   const [editingFAQ, setEditingFAQ] = useState(null);
@@ -31,7 +31,8 @@ const BisFaqManager = () => {
     setLoading(true);
     try {
       const res = await axios.get(api_bisfaqs);
-      setFaqs(res.data);
+      const data = Array.isArray(res.data) ? res.data : []; // Ensure data is an array
+      setFaqs(data);
     } catch (err) {
       console.error("Error fetching FAQs:", err);
       toast.error("Failed to load FAQs");
@@ -42,10 +43,14 @@ const BisFaqManager = () => {
 
   const handleAddFAQ = async (e) => {
     e.preventDefault();
-    if (!newFAQ.question || !newFAQ.answer) return;
+    if (!newFAQ.question.trim() || !newFAQ.answer.trim()) {
+      toast.error("Question and Answer are required.");
+      return;
+    }
+
     try {
       const res = await axios.post(api_bisfaqs, newFAQ);
-      setFaqs([...faqs, res.data]);
+      setFaqs((prevFaqs) => [...prevFaqs, res.data]); // Avoid direct state mutation
       toast.success("FAQ added successfully!");
       setNewFAQ({ question: "", answer: "" });
       setOpen(false);
@@ -58,13 +63,16 @@ const BisFaqManager = () => {
   const handleEditFAQ = async (e) => {
     e.preventDefault();
     if (!editingFAQ?._id) return;
+
     try {
       const response = await axios.put(`${api_bisfaqs}/${editingFAQ._id}`, {
         question: editingFAQ.question,
         answer: editingFAQ.answer,
       });
-      setFaqs(
-        faqs.map((faq) => (faq._id === editingFAQ._id ? response.data : faq))
+      setFaqs((prevFaqs) =>
+        prevFaqs.map((faq) =>
+          faq._id === editingFAQ._id ? response.data : faq
+        )
       );
       toast.success("FAQ updated successfully!");
       setEditingFAQ(null);
@@ -80,7 +88,7 @@ const BisFaqManager = () => {
       return;
     try {
       await axios.delete(`${api_bisfaqs}/${id}`);
-      setFaqs(faqs.filter((faq) => faq._id !== id));
+      setFaqs((prevFaqs) => prevFaqs.filter((faq) => faq._id !== id)); // Avoid direct mutation
       toast.success("FAQ deleted successfully!");
     } catch (err) {
       console.error("Error deleting FAQ:", err);
@@ -97,7 +105,13 @@ const BisFaqManager = () => {
         </CardHeader>
         <CardContent>
           {/* Add FAQ Button */}
-          <Dialog open={open} onOpenChange={setOpen}>
+          <Dialog
+            open={open}
+            onOpenChange={(isOpen) => {
+              if (!isOpen) setEditingFAQ(null); // Reset edit state when modal closes
+              setOpen(isOpen);
+            }}
+          >
             <DialogTrigger asChild>
               <Button className="mb-4">
                 <PlusCircle className="mr-2" size={18} />
@@ -118,11 +132,14 @@ const BisFaqManager = () => {
                   value={editingFAQ ? editingFAQ.question : newFAQ.question}
                   onChange={(e) =>
                     editingFAQ
-                      ? setEditingFAQ({
-                          ...editingFAQ,
+                      ? setEditingFAQ((prev) => ({
+                          ...prev,
                           question: e.target.value,
-                        })
-                      : setNewFAQ({ ...newFAQ, question: e.target.value })
+                        }))
+                      : setNewFAQ((prev) => ({
+                          ...prev,
+                          question: e.target.value,
+                        }))
                   }
                   required
                 />
@@ -131,8 +148,14 @@ const BisFaqManager = () => {
                   value={editingFAQ ? editingFAQ.answer : newFAQ.answer}
                   onChange={(e) =>
                     editingFAQ
-                      ? setEditingFAQ({ ...editingFAQ, answer: e.target.value })
-                      : setNewFAQ({ ...newFAQ, answer: e.target.value })
+                      ? setEditingFAQ((prev) => ({
+                          ...prev,
+                          answer: e.target.value,
+                        }))
+                      : setNewFAQ((prev) => ({
+                          ...prev,
+                          answer: e.target.value,
+                        }))
                   }
                   required
                 />
@@ -166,7 +189,10 @@ const BisFaqManager = () => {
                     <div className="flex gap-2">
                       <Button
                         variant="outline"
-                        onClick={() => setEditingFAQ(faq) || setOpen(true)}
+                        onClick={() => {
+                          setEditingFAQ(faq);
+                          setOpen(true);
+                        }}
                       >
                         <Edit size={16} />
                       </Button>
