@@ -1,14 +1,32 @@
 import { Phone } from "lucide-react";
-import { asset18, bg } from "../utils/ImgUtils";
+import { bg } from "../utils/ImgUtils";
+import animationImg2 from "../../public/assets/animation/animation2.json";
+import Lottie from "lottie-react";
 
 const Hero = () => {
+  const animations = [animationImg2];
+
+  // Check if any animation is missing
+  if (
+    animations.some(
+      (animationImg2) =>
+        !animationImg2 || Object.keys(animationImg2).length === 0
+    )
+  ) {
+    return (
+      <div className="h-screen flex items-center justify-center bg-gray-900 text-white">
+        ❌ One or more animations not found!
+      </div>
+    );
+  }
+
   return (
     <section
       className="bg-no-repeat bg-cover"
       style={{ backgroundImage: `url(${bg})` }}
     >
-      <div className="w-full mt-10 md:mt-0  ">
-        <div className="container mx-auto md:h-[50vh]  lg:h-[60vh]  flex justify-center items-center ">
+      <div className="w-full mt-10 md:mt-0  flex justify-center items-center">
+        <div className="container md:h-[50vh]  lg:h-[60vh]  flex justify-center items-center ">
           <div className=" px-4 sm:px-6 lg:px-8 w-[90%] ">
             <>
               {/* <img src={bg} className=" absolute bg-right" /> */}
@@ -21,9 +39,8 @@ const Hero = () => {
               <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-gray-600 max-w-[60rem]">
                 We are an Indian firm specializing in{" "}
                 <span className="text-[var(--main-color)]">
-                  BIS, LMPC, EPR Certificate
+                  BIS, LMPC, EPR Certificate , and{" "}
                 </span>
-                , and{" "}
                 <span className="text-[var(--main-color)]">
                   various other certifications
                 </span>{" "}
@@ -48,8 +65,11 @@ const Hero = () => {
                   </button>
                 </a>
               </div>
-              <img src={asset18} className="lg:absolute " />
+              {/* <img src={asset18} className="lg:absolute " /> */}
             </>
+          </div>
+          <div className="w-1/2">
+            <Lottie animationData={animationImg2} loop autoplay />
           </div>
         </div>
       </div>

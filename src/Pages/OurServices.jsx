@@ -1,7 +1,5 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import AOS from "aos";
-import "aos/dist/aos.css"; // Import AOS styles
+
 import { bee, wpc, isi, epr, tec, bis } from "../utils/ImgUtils";
 
 const OurServices = () => {
@@ -49,10 +47,6 @@ const OurServices = () => {
       image: epr,
     },
   ];
-
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
 
   return (
     <div className="bg-[var(--main-color2)]">

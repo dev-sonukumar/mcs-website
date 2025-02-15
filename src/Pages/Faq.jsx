@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import api_bisfaqs from "@/utils/api";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -7,7 +8,6 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
-import api_bisfaqs from "@/utils/api";
 
 const Faq = () => {
   const [faqData, setFaqData] = useState([]);
@@ -25,8 +25,9 @@ const Faq = () => {
         const data = await res.json();
         setFaqData(data);
         setFilteredFaqs(data);
-      } catch (e) {
-        setError("Failed to fetch FAQs");
+      } catch (err) {
+        setError("Failed to fetch FAQs", err);
+        console.log(err);
       } finally {
         setLoading(false);
       }

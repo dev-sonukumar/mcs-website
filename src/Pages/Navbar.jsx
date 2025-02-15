@@ -6,7 +6,7 @@ import { Menus } from "../utils/MenuUtils";
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 left-0 h-24 text-[15px]  w-full flex flex-col gap-2 bg-[var(--main-color2)] z-50 shadow-lg">
+    <header className="z-50 sticky top-0 left-0 h-24 text-[15px]  w-full flex flex-col gap-2 bg-[var(--main-color2)]  shadow-lg">
       {/* -- Top nav bar -- */}
       <div className=" bg-[var(--main-color)] text-[var(--text-color)] w-full ">
         <div className="container mx-auto flex justify-center gap-10 items-center  px-12">

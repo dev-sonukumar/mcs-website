@@ -1,3 +1,4 @@
+import ScrollDocument from "@/Pages/ScrollDocument";
 import HappyClientServicesCount from "../../Pages/HappyClientServiceCount";
 import Hero from "../../Pages/Hero";
 import ImageSlider from "../../Pages/ImageSlider";
@@ -10,6 +11,7 @@ const Home = () => {
       <OurServices />
       <HappyClientServicesCount />
       <ImageSlider />
+      <ScrollDocument />
       {/* <PostPage /> */}
       {/* <Post /> */}
     </div>
