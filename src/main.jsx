@@ -45,7 +45,7 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "/admin",
+    path: "/admin/*",
     element: <AdminLayout />, // Admin Panel Layout
     children: [
       { index: true, element: <Dashboard /> }, // Default admin route
