@@ -2,86 +2,70 @@ import { Link } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { Card } from "@/components/ui/card";
 
 export default function DesktopMenu({ menu }) {
-  const [isHover, toggleHover] = useState(false);
-  const toggleHoverMenu = () => {
-    toggleHover(!isHover);
-  };
+  const [isHover, setIsHover] = useState(false);
 
   const subMenuAnimate = {
     enter: {
       opacity: 1,
-      rotateX: 0,
-      transition: {
-        duration: 0.5,
-      },
+      y: 0,
+      transition: { duration: 0.3 },
       display: "block",
     },
     exit: {
       opacity: 0,
-      rotateX: -15,
-      transition: {
-        duration: 0.5,
-      },
-      transitionEnd: {
-        display: "none",
-      },
+      y: -10,
+      transition: { duration: 0.3 },
+      transitionEnd: { display: "none" },
     },
   };
 
-  const hasSubMenu = menu?.subMenu?.length;
+  const hasSubMenu = menu?.subMenu?.length > 0;
 
   return (
     <motion.li
-      className="group/link"
-      onHoverStart={() => {
-        toggleHoverMenu();
-      }}
-      onHoverEnd={toggleHoverMenu}
+      className="relative"
+      onHoverStart={() => setIsHover(true)}
+      onHoverEnd={() => setIsHover(false)}
       key={menu.name}
     >
-      {/* Link to the main menu route */}
       <Link
         to={menu.path}
-        className="flex-center gap-1 hover:bg-white/5 cursor-pointer px-3 py-1 rounded-xl"
+        className="flex items-center gap-2 px-4 py-2 hover:bg-accent rounded-lg"
       >
         {menu.name}
         {hasSubMenu && (
-          <ChevronDown className="mt-[0.6px] group-hover/link:rotate-180 duration-200" />
+          <ChevronDown
+            className={`transition-transform ${isHover ? "rotate-180" : ""}`}
+          />
         )}
       </Link>
 
       {hasSubMenu && (
         <motion.div
-          className="sub-menu"
+          className="absolute left-0 mt-2 w-80 bg-popover rounded-lg shadow-lg z-50"
           initial="exit"
           animate={isHover ? "enter" : "exit"}
           variants={subMenuAnimate}
         >
-          <div
-            className={`grid gap-4 ${
-              menu.gridCols === 3
-                ? "grid-cols-3"
-                : menu.gridCols === 2
-                ? "grid-cols-2"
-                : "grid-cols-1"
-            }`}
-          >
+          <Card className="p-2 space-y-2">
             {menu.subMenu.map((submenu, i) => (
-              <div key={i} className="flex gap-x-5 cursor-pointer">
-                <Link to={submenu.path} className="flex gap-x-4">
-                  <div className="bg-white/5 w-fit p-2 rounded-md group-hover/menubox:bg-white group-hover/menubox:text-gray-900 duration-300 ">
-                    {submenu.icon && <submenu.icon />}
-                  </div>
-                  <div>
-                    <h6 className="font-semibold">{submenu.name}</h6>
-                    <p className="text-sm text-gray-400">{submenu.desc}</p>
-                  </div>
-                </Link>
-              </div>
+              <Link
+                key={i}
+                to={submenu.path}
+                className="flex items-center gap-3 p-2 rounded-md hover:bg-accent transition w-full border border-dashed"
+              >
+                {submenu.icon && <submenu.icon className="w-5 h-5" />}
+                <div>
+                  <h6 className="font-semibold text-foreground text-sm   ">
+                    {submenu.name}
+                  </h6>
+                </div>
+              </Link>
             ))}
-          </div>
+          </Card>
         </motion.div>
       )}
     </motion.li>

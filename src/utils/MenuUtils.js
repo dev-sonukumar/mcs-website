@@ -23,15 +23,14 @@ export const Menus = [
     path: "/services",
     subMenu: [
       {
-        name: "BIS",
-
+        name: "BIS (Bureau of Indian Standards)",
         // icon: ChevronRight,
         icon: PanelsTopLeft,
         desc: "Responsive design",
         path: "/services/bis",
       },
       {
-        name: "BEE",
+        name: "BEE (Bureau of Energy Efficiency)",
 
         icon: PanelsTopLeft,
         desc: "Responsive design",
@@ -45,21 +44,21 @@ export const Menus = [
         path: "/services/wpc",
       },
       {
-        name: "ISI",
+        name: "ISI (Indian Standards Institute)",
 
         icon: PanelsTopLeft,
         desc: "Responsive design",
         path: "/services/isi",
       },
       {
-        name: "TEC",
+        name: "TEC (Telecommunication Engineering Centre)",
         desc: "Responsive design",
 
         icon: PanelsTopLeft,
         path: "/services/tec",
       },
       {
-        name: "EPR",
+        name: "EPR (Extended Producer Responsibility)",
         desc: "Responsive design",
         icon: PanelsTopLeft,
         path: "/services/epr",
@@ -133,10 +132,7 @@ export const Menus = [
     path: "/faqs",
     gridCols: 1,
   },
-  {
-    name: "Pricing",
-    path: "/pricing",
-  },
+
   {
     name: "Contact",
     path: "/contact",
