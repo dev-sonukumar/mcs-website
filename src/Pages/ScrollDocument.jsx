@@ -1,10 +1,20 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Lottie from "lottie-react";
-import { FaSearch, FaCog, FaCheckCircle, FaThumbsUp } from "react-icons/fa";
+import { MdVerified } from "react-icons/md";
+import {
+  FaSearch,
+  FaCog,
+  FaCheckCircle,
+  FaThumbsUp,
+  FaAward,
+} from "react-icons/fa";
 import animation1 from "../../public/assets/animation/animation1.json";
+import animation2 from "../../public/assets/animation/animation2.json";
 import animation3 from "../../public/assets/animation/animation3.json";
 import animation4 from "../../public/assets/animation/animation4.json";
+import animation5 from "../../public/assets/animation/animation5.json";
+import animation6 from "../../public/assets/animation/animation6.json";
 
 const Scroll3DEffect = () => {
   const ref = useRef(null);
@@ -20,7 +30,7 @@ const Scroll3DEffect = () => {
       icon: <FaSearch />,
     },
     {
-      animation: animation1,
+      animation: animation2,
       title: "prepare documents",
       icon: <FaCog />,
     },
@@ -31,24 +41,24 @@ const Scroll3DEffect = () => {
     },
     {
       animation: animation4,
-      title: "testing and inspection",
+      title: "testing & inspection",
       icon: <FaThumbsUp />,
     },
     {
-      animation: animation4,
+      animation: animation5,
       title: "successful verification",
-      icon: <FaThumbsUp />,
+      icon: <MdVerified />,
     },
     {
-      animation: animation4,
-      title: "Your Licence",
-      icon: <FaThumbsUp />,
+      animation: animation6,
+      title: "Your license",
+      icon: <FaAward />,
     },
   ];
 
   return (
     <div
-      className="h-[500vh] flex flex-col items-center justify-center  space-y-48"
+      className="overflow-hidden h-[510vh] flex flex-col items-center justify-center  space-y-48"
       ref={ref}
     >
       {animations.map((item, index) => {
@@ -71,20 +81,17 @@ const Scroll3DEffect = () => {
             className="w-full h-[35rem] flex flex-col items-center justify-center"
           >
             <div className="flex justify-center items-center container">
-              <div>
+              <div className="">
                 <h1 className="text-4xl font-bold mb-4">
                   Key steps in the certification process:
                 </h1>
 
-                <h2 className="text-7xl font-extrabold mb-4">
+                <h2 className="text-6xl font-extrabold mb-4">
                   {item.title} {item.icon}
                 </h2>
               </div>
               <div>
-                <Lottie
-                  animationData={item.animation}
-                  className="w-full h-full"
-                />
+                <Lottie animationData={item.animation} className="  " />
               </div>
             </div>
           </motion.div>

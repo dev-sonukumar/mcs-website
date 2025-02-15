@@ -36,7 +36,7 @@ const brand16 = "/assets/brand/brand16.png";
 const brand17 = "/assets/brand/brand17.png";
 const bg = "/assets/bg/bg2.jpg";
 const logo = "/assets/logo.png";
-const animationImg = "/assets/animation/animation.json";
+const animationImg = "/assets/animation/animation0.json";
 
 export {
   animationImg,

@@ -1,16 +1,15 @@
 import { Phone } from "lucide-react";
 import { bg } from "../utils/ImgUtils";
-import animationImg2 from "../../public/assets/animation/animation2.json";
+import animationImg from "../../public/assets/animation/animation0.json";
 import Lottie from "lottie-react";
 
 const Hero = () => {
-  const animations = [animationImg2];
+  const animations = [animationImg]; // ✅ Correct
 
   // Check if any animation is missing
   if (
     animations.some(
-      (animationImg2) =>
-        !animationImg2 || Object.keys(animationImg2).length === 0
+      (animationImg) => !animationImg || Object.keys(animationImg).length === 0
     )
   ) {
     return (
@@ -69,7 +68,7 @@ const Hero = () => {
             </>
           </div>
           <div className="w-1/2">
-            <Lottie animationData={animationImg2} loop autoplay />
+            <Lottie animationData={animationImg} loop autoplay />
           </div>
         </div>
       </div>
