@@ -1,28 +1,6 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
-import api_bisfaqs from "@/utils/api";
 
-// Utility function for API call with retries
-const apiCall = async (url, retries = 3) => {
-  for (let attempt = 1; attempt <= retries; attempt++) {
-    try {
-      console.log(`Attempt ${attempt} to fetch FAQs...`);
-      const response = await axios.get(url, { timeout: 10000 }); // 10s timeout
-      if (!Array.isArray(response.data))
-        throw new Error("Invalid API response format");
-      return response.data;
-    } catch (error) {
-      if (attempt === retries) {
-        console.error("Final request failed:", error.message);
-        throw new Error(
-          error.response?.data?.message ||
-            "Failed to fetch FAQs. Please try again later."
-        );
-      }
-      console.warn(`Retrying... (${attempt}/${retries})`);
-    }
-  }
-};
+import api_bisfaqs from "@/utils/api";
 
 const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -34,12 +12,19 @@ const Faq = () => {
 
   useEffect(() => {
     const fetchFAQs = async () => {
+      setLoading(true);
       try {
-        const data = await apiCall(api_bisfaqs);
+        const res = await fetch(api_bisfaqs); // Corrected fetch syntax
+        if (!res.ok) {
+          throw new Error(`HTTP error! Status: ${res.status}`);
+        }
+        const data = await res.json(); // Parse JSON
+        console.log("API Response:", data); // Debugging output
         setFaqData(data);
         setFilteredFaqs(data);
-      } catch (err) {
-        setError(err.message);
+      } catch (e) {
+        console.error("Error fetching FAQs:", e);
+        setError("Failed to fetch FAQs");
       } finally {
         setLoading(false);
       }
