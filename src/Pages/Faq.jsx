@@ -68,7 +68,7 @@ const Faq = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background py-10 px-4 sm:px-6 md:px-8">
+    <div className="container min-h-screen bg-background py-10 px-4 sm:px-6 md:px-8">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-3xl sm:text-4xl font-extrabold text-center text-foreground mb-6">
           Frequently Asked Questions
