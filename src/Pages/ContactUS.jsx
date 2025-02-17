@@ -4,6 +4,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import axios from "axios";
+import { api_email } from "@/utils/api";
 
 export default function ContactUS() {
   const [formData, setFormData] = useState({
@@ -22,7 +23,7 @@ export default function ContactUS() {
     e.preventDefault();
     setStatus("Sending...");
     try {
-      await axios.post("http://localhost:5000/send-email", formData);
+      await axios.post(api_email, formData);
       setStatus("Message sent successfully!");
       setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
