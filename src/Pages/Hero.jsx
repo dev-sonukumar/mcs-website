@@ -13,7 +13,7 @@ const Hero = () => {
     )
   ) {
     return (
-      <div className="h-screen flex items-center justify-center bg-gray-900 text-white">
+      <div className="h-screen flex  items-center justify-center bg-gray-900 text-white">
         ❌ One or more animations not found!
       </div>
     );
@@ -25,17 +25,17 @@ const Hero = () => {
       style={{ backgroundImage: `url(${bg})` }}
     >
       <div className="w-full mt-10 md:mt-0  flex justify-center items-center">
-        <div className="container md:h-[50vh]  lg:h-[60vh]  flex justify-center items-center ">
+        <div className="container pb-12 flex flex-col lg:flex-row justify-center items-center ">
           <div className=" px-4 sm:px-6 lg:px-8 w-[90%] ">
             <>
               {/* <img src={bg} className=" absolute bg-right" /> */}
 
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-400 mb-4 hover:text-[var(--main2-color)] transition-colors duration-300 ">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-6xl font-black text-400 mb-4 hover:text-[var(--main2-color)] transition-colors duration-300 ">
                 Best consulting firm for{" "}
                 <span className="text-[var(--main-color)]">BIS, EPR </span> and
                 various other certifications in Delhi, India.
               </h1>
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-gray-600 max-w-[60rem]">
+              <p className="text-sm sm:text-base md:text-lg xl:text-2xl 2xl:text-3xl text-gray-600 max-w-[60rem]">
                 We are an Indian firm specializing in{" "}
                 <span className="text-[var(--main-color)]">
                   BIS, LMPC, EPR Certificate , and{" "}

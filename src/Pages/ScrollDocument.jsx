@@ -24,41 +24,29 @@ const Scroll3DEffect = () => {
   });
 
   const animations = [
-    {
-      animation: animation1,
-      title: "Identify product",
-      icon: <FaSearch />,
-    },
-    {
-      animation: animation2,
-      title: "prepare documents",
-      icon: <FaCog />,
-    },
+    { animation: animation1, title: "Identify product", icon: <FaSearch /> },
+    { animation: animation2, title: "Prepare documents", icon: <FaCog /> },
     {
       animation: animation3,
-      title: "submit an application",
+      title: "Submit an application",
       icon: <FaCheckCircle />,
     },
     {
       animation: animation4,
-      title: "testing & inspection",
+      title: "Testing & inspection",
       icon: <FaThumbsUp />,
     },
     {
       animation: animation5,
-      title: "successful verification",
+      title: "Successful verification",
       icon: <MdVerified />,
     },
-    {
-      animation: animation6,
-      title: "Your license",
-      icon: <FaAward />,
-    },
+    { animation: animation6, title: "Your license", icon: <FaAward /> },
   ];
 
   return (
     <div
-      className="overflow-hidden h-[510vh] flex flex-col items-center justify-center  space-y-48"
+      className="overflow-hidden pb-20 flex flex-col items-center justify-center space-y-24 px-4 sm:px-8"
       ref={ref}
     >
       {animations.map((item, index) => {
@@ -78,20 +66,30 @@ const Scroll3DEffect = () => {
             key={index}
             ref={animRef}
             style={{ rotateX, rotateY, scale, opacity }}
-            className="w-full h-[35rem] flex flex-col items-center justify-center"
+            className="w-full min-h-[30rem] flex flex-col items-center justify-center"
           >
-            <div className="flex justify-center items-center container">
-              <div className="">
-                <h1 className="text-4xl font-bold mb-4">
+            <div className="flex flex-col-reverse lg:flex-row justify-between items-center container text-center lg:text-left ">
+              {/* Text Content */}
+              <div className="lg:w-[75%] flex flex-col  justify-center items-center">
+                <h3 className="text-3xl sm:text-4xl font-bold mb-4">
                   Key steps in the certification process:
-                </h1>
-
-                <h2 className="text-6xl font-extrabold mb-4">
-                  {item.title} {item.icon}
+                </h3>
+                <h2 className="text-4xl sm:text-5xl lg:text-5xl xl:text-7xl font-extrabold mb-4 flex items-center justify-between lg:justify-start">
+                  {item.title} <span className="ml-5">{item.icon}</span>
                 </h2>
+                <div>
+                  <span className="lg:hidden text-4xl sm:text-6xl lg:text-6xl  font-extrabold mb-4 items-center justify-between lg:justify-start">
+                    {item.icon}
+                  </span>
+                </div>
               </div>
-              <div>
-                <Lottie animationData={item.animation} className="  " />
+
+              {/* Animation */}
+              <div className="lg:w-1/3 flex justify-center">
+                <Lottie
+                  animationData={item.animation}
+                  className="max-w-xs sm:max-w-md"
+                />
               </div>
             </div>
           </motion.div>

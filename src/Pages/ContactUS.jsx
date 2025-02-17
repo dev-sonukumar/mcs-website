@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import axios from "axios";
 import { api_email } from "@/utils/api";
+import { contactImg } from "@/utils/ImgUtils";
 
 export default function ContactUS() {
   const [formData, setFormData] = useState({
@@ -32,7 +33,8 @@ export default function ContactUS() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex flex-col-reverse lg:flex-row items-center justify-center min-h-screen bg-gray-100 px-4 py-8">
+      {/* Contact Form */}
       <Card className="w-full max-w-lg p-6 bg-white shadow-lg">
         <CardContent>
           <h2 className="text-2xl font-bold text-center mb-4">Contact Us</h2>
@@ -75,6 +77,11 @@ export default function ContactUS() {
           {status && <p className="text-center mt-4 text-sm">{status}</p>}
         </CardContent>
       </Card>
+
+      {/* Contact Image */}
+      <div className="w-full max-w-md lg:w-1/2 flex justify-center">
+        <img src={contactImg} alt="Contact" className="max-w-full h-auto" />
+      </div>
     </div>
   );
 }
