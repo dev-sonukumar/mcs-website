@@ -75,7 +75,8 @@ const Scroll3DEffect = () => {
                   Key steps in the certification process:
                 </h3>
                 <h2 className="text-4xl sm:text-5xl lg:text-5xl xl:text-7xl font-extrabold mb-4 flex items-center justify-between lg:justify-start">
-                  {item.title} <span className="ml-5">{item.icon}</span>
+                  {item.title}{" "}
+                  <span className="ml-5 hidden lg:flex">{item.icon}</span>
                 </h2>
                 <div>
                   <span className="lg:hidden text-4xl sm:text-6xl lg:text-6xl  font-extrabold mb-4 items-center justify-between lg:justify-start">
