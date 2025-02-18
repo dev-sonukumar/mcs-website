@@ -15,7 +15,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Toaster } from "@/components/ui/toaster";
-import { toast } from "sonner"; // Using 'sonner' for toasts
+import { toast } from "sonner";
 
 const BisFaqManager = () => {
   const [faqs, setFaqs] = useState([]); // Ensuring it's an array

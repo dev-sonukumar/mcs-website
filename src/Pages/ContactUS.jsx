@@ -14,7 +14,7 @@ export default function ContactUS() {
     subject: "",
     message: "",
   });
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState({ message: "", type: "" });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -22,13 +22,18 @@ export default function ContactUS() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("Sending...");
+    setStatus({ message: "Sending...", type: "info" });
+
     try {
       await axios.post(api_email, formData);
-      setStatus("Message sent successfully!");
+      setStatus({ message: "Message sent successfully!", type: "success" });
       setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
-      setStatus("Error sending message. Please try again.");
+      console.error("Error sending message:", error);
+      setStatus({
+        message: "Error sending message. Please try again.",
+        type: "error",
+      });
     }
   };
 
@@ -36,7 +41,7 @@ export default function ContactUS() {
     <div className="flex flex-col-reverse lg:flex-row items-center justify-center min-h-screen bg-gray-100 px-4 py-8">
       {/* Contact Form */}
       <Card className="w-full max-w-lg p-6 bg-white shadow-lg">
-        <CardContent>
+        <CardContent className="p-4">
           <h2 className="text-2xl font-bold text-center mb-4">Contact Us</h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <Input
@@ -46,6 +51,7 @@ export default function ContactUS() {
               value={formData.name}
               onChange={handleChange}
               required
+              aria-label="Your Name"
             />
             <Input
               type="email"
@@ -54,6 +60,7 @@ export default function ContactUS() {
               value={formData.email}
               onChange={handleChange}
               required
+              aria-label="Your Email"
             />
             <Input
               type="text"
@@ -62,6 +69,7 @@ export default function ContactUS() {
               value={formData.subject}
               onChange={handleChange}
               required
+              aria-label="Subject"
             />
             <Textarea
               name="message"
@@ -69,18 +77,31 @@ export default function ContactUS() {
               value={formData.message}
               onChange={handleChange}
               required
+              aria-label="Your Message"
             />
             <Button type="submit" className="w-full">
               Send Message
             </Button>
           </form>
-          {status && <p className="text-center mt-4 text-sm">{status}</p>}
+          {status.message && (
+            <p
+              className={`text-center mt-4 text-sm ${
+                status.type === "success" ? "text-green-600" : "text-red-600"
+              }`}
+            >
+              {status.message}
+            </p>
+          )}
         </CardContent>
       </Card>
 
       {/* Contact Image */}
       <div className="w-full max-w-md lg:w-1/2 flex justify-center">
-        <img src={contactImg} alt="Contact" className="max-w-full h-auto" />
+        <img
+          src={contactImg}
+          alt="Contact Illustration"
+          className="max-w-full h-auto"
+        />
       </div>
     </div>
   );
