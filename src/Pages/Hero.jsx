@@ -1,7 +1,8 @@
 import { Phone } from "lucide-react";
-import { bg } from "../utils/ImgUtils";
+import { asset, asset1, asset2, bg } from "../utils/ImgUtils";
 import animationImg from "../../public/assets/animation/animation0.json";
 import Lottie from "lottie-react";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   const animations = [animationImg]; // ✅ Correct
@@ -24,23 +25,23 @@ const Hero = () => {
       className="bg-no-repeat bg-cover"
       style={{ backgroundImage: `url(${bg})` }}
     >
-      <div className="w-full mt-10 md:mt-0  flex justify-center items-center">
-        <div className="container pb-12 flex flex-col lg:flex-row justify-center items-center ">
-          <div className=" px-4 sm:px-6 lg:px-8 w-[90%] ">
+      <div className="w-full h-screen  flex justify-center items-center">
+        <div className="container flex flex-col lg:flex-row justify-center items-center ">
+          <div className="px-4 sm:px-6 lg:px-0 w-full ">
             <>
-              {/* <img src={bg} className=" absolute bg-right" /> */}
+              {/* <img src={asset2} className=" absolute bg-right z-50" /> */}
 
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-6xl font-black text-400 mb-4 hover:text-[var(--main2-color)] transition-colors duration-300 ">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-6xl font-black text-400 mb-4  text-white  transition-colors duration-300 ">
                 Best consulting firm for{" "}
-                <span className="text-[var(--main-color)]">BIS, EPR </span> and
-                various other certifications in Delhi, India.
+                <span className="text-red-400">BIS, EPR </span> and various
+                other certifications in Delhi, India.
               </h1>
-              <p className="text-sm sm:text-base md:text-lg xl:text-2xl 2xl:text-3xl text-gray-600 max-w-[60rem]">
+              <p className="text-sm sm:text-base md:text-lg xl:text-2xl 2xl:text-3xl text-gray-100 max-w-[60rem]">
                 We are an Indian firm specializing in{" "}
-                <span className="text-[var(--main-color)]">
+                <span className="text-red-400">
                   BIS, LMPC, EPR Certificate , and{" "}
                 </span>
-                <span className="text-[var(--main-color)]">
+                <span className="text-red-400">
                   various other certifications
                 </span>{" "}
                 that will help you enter or sell in the Indian market at a
@@ -54,7 +55,7 @@ const Hero = () => {
                 <a href="tel:+917065995901">
                   <button
                     aria-label="Call Now"
-                    className="bg-[var(--main-color)] p-3 shadow rounded-xl flex items-center text-white hover:bg-gray-300 hover:text-[var(--color5)] transition-all  font-bold animate-bounce"
+                    className="bg-[var(--gray-color5)] p-3 shadow rounded-xl flex items-center  hover:bg-[var(--gray-color4)] text-[var(--black-color)] transition-all  font-bold animate-bounce"
                   >
                     <Phone
                       className="mr-2 transition-transform duration-200"
@@ -67,8 +68,18 @@ const Hero = () => {
               {/* <img src={asset18} className="lg:absolute " /> */}
             </>
           </div>
-          <div className="w-1/2">
-            <Lottie animationData={animationImg} loop autoplay />
+          <div className="w-1/2 ">
+            {/* <Lottie animationData={animationImg} loop autoplay /> */}
+
+            <motion.img
+              src={asset}
+              animate={{ rotate: 360 }}
+              transition={{
+                duration: 1,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+            />
           </div>
         </div>
       </div>

@@ -12,13 +12,18 @@
   margin: 0 auto;
 }
 :root {
-  --main-color: #ff5f49;
-  --main-color2: #f2f9ff;
-  --main-color3: #f1faf5;
+  --main-color: #0e1b2c;
+  --main-color2: #182555;
+  --main-color3: #1f2a6c;
   --secondary-color: #097969;
   --secondary2-color: #06594f;
   --text-color: #ffffff;
   --color-black: #28282b;
+  --gray-color: #8f8f8f;
+  --gray-color2: #919090;
+  --gray-color3: #a7a7a7;
+  --gray-color4: #a8a8a8;
+  --gray-color5: #e8eaed;
   --color-white: #fdfdfd;
   --card-color: #f6eee8;
 }

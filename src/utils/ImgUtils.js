@@ -4,9 +4,12 @@ const wpc = "/assets/service/wpc.JPG";
 const isi = "/assets/service/isi.JPG";
 const epr = "/assets/service/epr.JPG";
 const tec = "/assets/service/tec.JPG";
-const asset1 = "/assets/bg/asset1.svg";
-const asset2 = "/assets/bg/asset2.svg";
-const asset3 = "/assets/bg/asset3.svg";
+const asset1 = "/assets/bg/asset1.png";
+const asset2 = "/assets/bg/asset2.png";
+const asset3 = "/assets/bg/asset3.png";
+const asset4 = "/assets/bg/asset4.png";
+const asset5 = "/assets/bg/asset5.png";
+const asset = "/assets/bg/asset.svg";
 const asset9 = "/assets/bg/asset9.svg";
 const asset10 = "/assets/bg/asset10.svg";
 const asset11 = "/assets/bg/asset11.svg";
@@ -34,7 +37,8 @@ const brand14 = "/assets/brand/brand14.png";
 const brand15 = "/assets/brand/brand15.png";
 const brand16 = "/assets/brand/brand16.png";
 const brand17 = "/assets/brand/brand17.png";
-const bg = "/assets/bg/bg2.jpg";
+const bg1 = "/assets/bg/bg2.jpg";
+const bg = "/assets/bg/bg.png";
 const logo = "/assets/logo.png";
 const animationImg = "/assets/animation/animation0.json";
 const contactImg = "/assets/bg/contact-img.png";
@@ -42,6 +46,10 @@ const contactImg = "/assets/bg/contact-img.png";
 export {
   contactImg,
   animationImg,
+  asset,
+  asset4,
+  asset5,
+  bg1,
   bg,
   logo,
   bis,

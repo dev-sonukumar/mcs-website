@@ -13,10 +13,13 @@ import AdminPanel from "./Pages/admin/AdminPanel";
 import Dashboard from "./components/admin/Dashboard";
 import AdminProfile from "./Pages/admin/AdminProfile";
 import BisFaqManager from "./components/admin/BisFaqManager";
+import SmoothScroll from "./utils/smootScroll";
+
 
 // Layout Component for Public Pages
 const Layout = () => (
   <div>
+    <SmoothScroll /> {/* Enable smooth scrolling */}
     <Navbar />
     <Outlet />
     <Footer />
@@ -26,8 +29,8 @@ const Layout = () => (
 // Layout for Admin Panel (Allows Nested Routes)
 const AdminLayout = () => (
   <div>
+    <SmoothScroll /> {/* Enable smooth scrolling in admin */}
     <AdminPanel />
-    {/* <Outlet /> This enables child routes inside /admin */}
   </div>
 );
 
