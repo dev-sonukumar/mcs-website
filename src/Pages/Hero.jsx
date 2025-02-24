@@ -1,7 +1,7 @@
 import { Phone } from "lucide-react";
-import { asset, asset1, asset2, bg } from "../utils/ImgUtils";
+import { asset, bg } from "../utils/ImgUtils";
 import animationImg from "../../public/assets/animation/animation0.json";
-import Lottie from "lottie-react";
+
 import { motion } from "framer-motion";
 
 const Hero = () => {
@@ -25,13 +25,13 @@ const Hero = () => {
       className="bg-no-repeat bg-cover"
       style={{ backgroundImage: `url(${bg})` }}
     >
-      <div className="w-full h-screen  flex justify-center items-center">
+      <div className="w-full h-screen  flex justify-between items-center">
         <div className="container flex flex-col lg:flex-row justify-center items-center ">
-          <div className="px-4 sm:px-6 lg:px-0 w-full ">
+          <div className="px-4 sm:px-6 lg:px-0 w-full bdr">
             <>
               {/* <img src={asset2} className=" absolute bg-right z-50" /> */}
 
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-6xl font-black text-400 mb-4  text-white  transition-colors duration-300 ">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-black text-400 mb-4  text-white  transition-colors duration-300 ">
                 Best consulting firm for{" "}
                 <span className="text-red-400">BIS, EPR </span> and various
                 other certifications in Delhi, India.
@@ -68,18 +68,24 @@ const Hero = () => {
               {/* <img src={asset18} className="lg:absolute " /> */}
             </>
           </div>
-          <div className="w-1/2 ">
-            {/* <Lottie animationData={animationImg} loop autoplay /> */}
-
-            <motion.img
-              src={asset}
-              animate={{ rotate: 360 }}
-              transition={{
-                duration: 1,
-                repeat: Infinity,
-                ease: "linear",
-              }}
-            />
+          <div className="w-1/2 bdr ">
+            <div className="relative w-40 h-40 flex items-center justify-center">
+              <motion.div
+                className="absolute text-xl font-bold text-blue-600"
+                animate={{
+                  rotate: [0, 360], // Full rotation
+                }}
+                transition={{
+                  repeat: Infinity, // Infinite loop
+                  duration: 7, // Speed of rotation
+                  ease: "linear",
+                }}
+              >
+                <div className="ml-auto bdr">
+                  <img src={asset} alt=" bdr" />
+                </div>
+              </motion.div>
+            </div>
           </div>
         </div>
       </div>

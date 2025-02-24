@@ -151,3 +151,26 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* --- tesxt animation ---- */
+/* Add this to your global or component-specific CSS */
+.marquee-container {
+  overflow: hidden;
+  background-color: #f3f4f6; /* Light gray background */
+  padding: 40px 0; /* Adjust padding as needed */
+}
+
+.marquee-text {
+  white-space: nowrap;
+  font-size: 4rem; /* Adjust font size as needed */
+  font-weight: 900;
+  color: #374151; /* Dark gray text */
+}
+
+/* if you want to apply any other txt then this is the way */
+/* 
+<div className="marquee-container">
+  <div className="marquee-text" ref={marqueeRef}>
+    Empower Your Business: Your Trusted Consultant for Legal Business Compliance Solutions.
+  </div>
+</div> */
