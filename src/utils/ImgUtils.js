@@ -40,10 +40,12 @@ const brand17 = "/assets/brand/brand17.png";
 const bg1 = "/assets/bg/bg2.jpg";
 const bg = "/assets/bg/bg.png";
 const logo = "/assets/logo.png";
+const about1 = "/assets/about1.png";
 const animationImg = "/assets/animation/animation0.json";
 const contactImg = "/assets/bg/contact-img.png";
 
 export {
+  about1,
   contactImg,
   animationImg,
   asset,

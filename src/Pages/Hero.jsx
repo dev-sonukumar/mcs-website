@@ -1,8 +1,8 @@
 import { Phone } from "lucide-react";
-import { asset, bg } from "../utils/ImgUtils";
+import { asset, asset1, bg } from "../utils/ImgUtils";
 import animationImg from "../../public/assets/animation/animation0.json";
-
-import { motion } from "framer-motion";
+import HeroAnimation from "./HeroAnimation";
+import { Link } from "react-router";
 
 const Hero = () => {
   const animations = [animationImg]; // ✅ Correct
@@ -29,9 +29,12 @@ const Hero = () => {
         <div className="container flex flex-col lg:flex-row justify-center items-center ">
           <div className="px-4 sm:px-6 lg:px-0 w-full ">
             <>
-              {/* <img src={asset2} className=" absolute bg-right z-50" /> */}
+              <img
+                src={asset1}
+                className=" absolute bg-right  left-24 top-48"
+              />
 
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-black text-400 mb-4  text-white  transition-colors duration-300 ">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-black text-400 mb-4  text-white  transition-colors duration-300 ">
                 Best consulting firm for{" "}
                 <span className="text-red-400">BIS, EPR </span> and various
                 other certifications in Delhi, India.
@@ -68,24 +71,10 @@ const Hero = () => {
               {/* <img src={asset18} className="lg:absolute " /> */}
             </>
           </div>
-          <div className="w-1/2 ml-0">
-            <div className="relative w-40 h-40 flex items-center justify-center">
-              <motion.div
-                className="absolute text-xl font-bold text-blue-600"
-                animate={{
-                  rotate: [0, 360], // Full rotation
-                }}
-                transition={{
-                  repeat: Infinity, // Infinite loop
-                  duration: 7, // Speed of rotation
-                  ease: "linear",
-                }}
-              >
-                <div className=" ">
-                  <img src={asset} />
-                </div>
-              </motion.div>
-            </div>
+          <div className="w-1/2  flex justify-center items-center ">
+            <Link to="/contact">
+              <HeroAnimation />
+            </Link>
           </div>
         </div>
       </div>

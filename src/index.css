@@ -174,3 +174,14 @@ body {
     Empower Your Business: Your Trusted Consultant for Legal Business Compliance Solutions.
   </div>
 </div> */
+
+/* ---- page css ---- */
+.sliderContainer {
+  position: absolute;
+  top: calc(100vh -300px);
+}
+.slider {
+  position: relative;
+  white-space: nowrap;
+  display: flex;
+}
