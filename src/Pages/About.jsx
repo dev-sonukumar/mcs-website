@@ -1,5 +1,5 @@
 import gsap from "gsap";
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { about1 } from "@/utils/ImgUtils";
 
@@ -57,7 +57,7 @@ const Page = () => {
           </h1>
         </div>
         <section className="container pt-10 ">
-          <img src={about1} alt="" srcset="" />
+          <img src={about1} alt="" />
         </section>
       </div>
     </div>

@@ -1,31 +1,15 @@
 import { Phone } from "lucide-react";
-import { asset, asset1, bg } from "../utils/ImgUtils";
-import animationImg from "../../public/assets/animation/animation0.json";
+import { asset1, bg } from "../utils/ImgUtils";
 import HeroAnimation from "./HeroAnimation";
 import { Link } from "react-router";
 
 const Hero = () => {
-  const animations = [animationImg]; // ✅ Correct
-
-  // Check if any animation is missing
-  if (
-    animations.some(
-      (animationImg) => !animationImg || Object.keys(animationImg).length === 0
-    )
-  ) {
-    return (
-      <div className="h-screen flex  items-center justify-center bg-gray-900 text-white">
-        ❌ One or more animations not found!
-      </div>
-    );
-  }
-
   return (
     <section
-      className="bg-no-repeat bg-cover"
+      className="bg-no-repeat bg-cover h-[80vh] flex pt-20 lg:pt-0 "
       style={{ backgroundImage: `url(${bg})` }}
     >
-      <div className="w-full h-screen  flex justify-between items-center">
+      <div className="w-full flex justify-between items-center ">
         <div className="container flex flex-col lg:flex-row justify-center items-center ">
           <div className="px-4 sm:px-6 lg:px-0 w-full ">
             <>
@@ -71,7 +55,7 @@ const Hero = () => {
               {/* <img src={asset18} className="lg:absolute " /> */}
             </>
           </div>
-          <div className="w-1/2  flex justify-center items-center ">
+          <div className="w-40 h-40  lg:w-1/2  flex justify-center items-center ">
             <Link to="/contact">
               <HeroAnimation />
             </Link>

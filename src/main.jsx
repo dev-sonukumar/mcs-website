@@ -14,11 +14,12 @@ import Dashboard from "./components/admin/Dashboard";
 import AdminProfile from "./Pages/admin/AdminProfile";
 import BisFaqManager from "./components/admin/BisFaqManager";
 import SmoothScroll from "./utils/smootScroll";
-
+import CanvasCursor from "./components/CanvasCursor";
 
 // Layout Component for Public Pages
 const Layout = () => (
   <div>
+    <CanvasCursor /> {/* Adding animated cursor effect */}
     <SmoothScroll /> {/* Enable smooth scrolling */}
     <Navbar />
     <Outlet />
@@ -29,6 +30,7 @@ const Layout = () => (
 // Layout for Admin Panel (Allows Nested Routes)
 const AdminLayout = () => (
   <div>
+    <CanvasCursor /> {/* Adding animated cursor effect */}
     <SmoothScroll /> {/* Enable smooth scrolling in admin */}
     <AdminPanel />
   </div>
