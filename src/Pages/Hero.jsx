@@ -2,16 +2,17 @@ import { Phone } from "lucide-react";
 import { asset1, bg } from "../utils/ImgUtils";
 import HeroAnimation from "./HeroAnimation";
 import { Link } from "react-router";
+import ServicesAnimation from "./AminamtionPages/ServicesAnimation";
 
 const Hero = () => {
   return (
     <section
-      className="bg-no-repeat bg-cover h-[80vh] flex pt-20 lg:pt-0 "
+      className="bg-no-repeat bg-cover h-[80vh] flex  "
       style={{ backgroundImage: `url(${bg})` }}
     >
-      <div className="w-full flex justify-between items-center ">
+      <div className="w-full flex justify-between items-center mt-[-60px] lg:mt-[-120px]">
         <div className="container flex flex-col lg:flex-row justify-center items-center ">
-          <div className="px-4 sm:px-6 lg:px-0 w-full ">
+          <div className="px-4 sm:px-6 lg:px-0 w-full relative ">
             <>
               <img
                 src={asset1}
@@ -38,7 +39,7 @@ const Hero = () => {
               </p>
 
               {/* -- Call Button --*/}
-              <div className="inline-block h-[50px] mt-10">
+              <div className="inline-block h-[50px] mt-10 ">
                 <a href="tel:+917065995901">
                   <button
                     aria-label="Call Now"
@@ -51,11 +52,14 @@ const Hero = () => {
                     +91-7065995901
                   </button>
                 </a>
+                <div className="absolute left-[-100px] bottom-[-180px]">
+                  <ServicesAnimation />
+                </div>
               </div>
               {/* <img src={asset18} className="lg:absolute " /> */}
             </>
           </div>
-          <div className="w-40 h-40  lg:w-1/2  flex justify-center items-center ">
+          <div className="hidden  w-40 h-40  lg:w-1/2  lg:flex justify-center items-center ">
             <Link to="/contact">
               <HeroAnimation />
             </Link>
