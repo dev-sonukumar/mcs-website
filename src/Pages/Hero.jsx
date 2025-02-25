@@ -27,7 +27,7 @@ const Hero = () => {
     >
       <div className="w-full h-screen  flex justify-between items-center">
         <div className="container flex flex-col lg:flex-row justify-center items-center ">
-          <div className="px-4 sm:px-6 lg:px-0 w-full bdr">
+          <div className="px-4 sm:px-6 lg:px-0 w-full ">
             <>
               {/* <img src={asset2} className=" absolute bg-right z-50" /> */}
 
@@ -68,7 +68,7 @@ const Hero = () => {
               {/* <img src={asset18} className="lg:absolute " /> */}
             </>
           </div>
-          <div className="w-1/2 bdr ">
+          <div className="w-1/2 ml-0">
             <div className="relative w-40 h-40 flex items-center justify-center">
               <motion.div
                 className="absolute text-xl font-bold text-blue-600"
@@ -81,8 +81,8 @@ const Hero = () => {
                   ease: "linear",
                 }}
               >
-                <div className="ml-auto bdr">
-                  <img src={asset} alt=" bdr" />
+                <div className=" ">
+                  <img src={asset} />
                 </div>
               </motion.div>
             </div>
