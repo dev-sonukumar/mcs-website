@@ -1,10 +1,5 @@
 import { motion, useMotionValue, useAnimation } from "framer-motion";
-import {
-  ArrowDownRight,
-  ArrowUpRight,
-  CircleArrowOutUpRight,
-  TrendingUp,
-} from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function ExploreServices() {

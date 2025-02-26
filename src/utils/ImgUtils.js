@@ -1,78 +1,54 @@
-const bis = "/assets/service/bis.JPG";
-const bee = "/assets/service/bee.JPG";
-const wpc = "/assets/service/wpc.JPG";
-const isi = "/assets/service/isi.JPG";
-const epr = "/assets/service/epr.JPG";
-const tec = "/assets/service/tec.JPG";
-const asset1 = "/assets/bg/asset1.png";
-const asset2 = "/assets/bg/asset2.png";
-const asset3 = "/assets/bg/asset3.png";
-const asset4 = "/assets/bg/asset4.png";
-const asset5 = "/assets/bg/asset5.png";
+const bis = "/assets/service/bis.webp";
+const bee = "/assets/service/bee.webp";
+const epr = "/assets/service/epr.webp";
+const isi = "/assets/service/isi.webp";
+const tec = "/assets/service/tec.webp";
+const wpc = "/assets/service/wpc.webp";
+
 const asset = "/assets/bg/asset.svg";
-const asset9 = "/assets/bg/asset9.svg";
-const asset10 = "/assets/bg/asset10.svg";
-const asset11 = "/assets/bg/asset11.svg";
-const asset12 = "/assets/bg/asset12.svg";
-const asset13 = "/assets/bg/asset13.svg";
-const asset14 = "/assets/bg/asset14.svg";
-const asset15 = "/assets/bg/asset15.svg";
-const asset16 = "/assets/bg/asset16.svg";
-const asset17 = "/assets/bg/asset17.svg";
-const asset18 = "/assets/bg/asset18.svg";
-const brand1 = "/assets/brand/brand1.png";
-const brand2 = "/assets/brand/brand2.png";
-const brand3 = "/assets/brand/brand3.png";
-const brand4 = "/assets/brand/brand4.png";
-const brand5 = "/assets/brand/brand5.png";
-const brand6 = "/assets/brand/brand6.png";
-const brand7 = "/assets/brand/brand7.png";
-const brand8 = "/assets/brand/brand8.png";
-const brand9 = "/assets/brand/brand9.png";
-const brand10 = "/assets/brand/brand10.png";
-const brand11 = "/assets/brand/brand11.png";
-const brand12 = "/assets/brand/brand12.png";
-const brand13 = "/assets/brand/brand13.png";
-const brand14 = "/assets/brand/brand14.png";
-const brand15 = "/assets/brand/brand15.png";
-const brand16 = "/assets/brand/brand16.png";
-const brand17 = "/assets/brand/brand17.png";
-const bg1 = "/assets/bg/bg2.jpg";
-const bg = "/assets/bg/bg.png";
+const asset1 = "/assets/bg/asset1.webp";
+const asset2 = "/assets/bg/asset2.webp";
+const asset3 = "/assets/bg/asset3.webp";
+const asset4 = "/assets/bg/asset4.webp";
+const bg = "/assets/bg/bg.webp";
+const contactImg = "/assets/bg/contact-img.webp";
+
+const brand1 = "/assets/brand/brand1.webp";
+const brand2 = "/assets/brand/brand2.webp";
+const brand3 = "/assets/brand/brand3.webp";
+const brand4 = "/assets/brand/brand4.webp";
+const brand5 = "/assets/brand/brand5.webp";
+const brand6 = "/assets/brand/brand6.webp";
+const brand7 = "/assets/brand/brand7.webp";
+const brand8 = "/assets/brand/brand8.webp";
+const brand9 = "/assets/brand/brand9.webp";
+const brand10 = "/assets/brand/brand10.webp";
+const brand11 = "/assets/brand/brand11.webp";
+const brand12 = "/assets/brand/brand12.webp";
+const brand13 = "/assets/brand/brand13.webp";
+const brand14 = "/assets/brand/brand14.webp";
+const brand15 = "/assets/brand/brand15.webp";
+const brand16 = "/assets/brand/brand16.webp";
+const brand17 = "/assets/brand/brand17.webp";
+
 const logo = "/assets/logo.png";
-const about1 = "/assets/about1.png";
-const animationImg = "/assets/animation/animation0.json";
-const contactImg = "/assets/bg/contact-img.png";
+const about1 = "/assets/hero/about1.webp";
+const about2 = "/assets/hero/about2.webp";
 
 export {
-  about1,
-  contactImg,
-  animationImg,
-  asset,
-  asset4,
-  asset5,
-  bg1,
-  bg,
-  logo,
   bis,
   bee,
-  wpc,
-  isi,
   epr,
+  isi,
   tec,
+  wpc,
+  asset,
   asset1,
   asset2,
   asset3,
-  asset9,
-  asset10,
-  asset11,
-  asset12,
-  asset13,
-  asset14,
-  asset15,
-  asset16,
-  asset17,
-  asset18,
+  asset4,
+  bg,
+  contactImg,
   brand1,
   brand2,
   brand3,
@@ -90,4 +66,7 @@ export {
   brand15,
   brand16,
   brand17,
+  logo,
+  about1,
+  about2,
 };
