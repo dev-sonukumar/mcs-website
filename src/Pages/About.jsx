@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { about2, asset2 } from "@/utils/ImgUtils";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router";
+import { motion } from "framer-motion";
 
 const Page = () => {
   const firstText = useRef(null);
@@ -72,9 +73,15 @@ const Page = () => {
             <img src={about2} alt="About Us" />
           </div>
           <div className="lg:w-1/2  ">
-            <h2 className="font-bold text-3xl lg:text-5xl lg:mb-10">
+            <motion.h2
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.5 }}
+              className="font-bold text-3xl lg:text-5xl lg:mb-10"
+            >
               Who we are ?
-            </h2>
+            </motion.h2>
+
             <p className="pt-5 text-[var(--gray-color)]  lg:mb-10">
               MCS Technology Inc is a New Delhi (India) based certified service
               provider, Our services are praised for their reasonable charges
