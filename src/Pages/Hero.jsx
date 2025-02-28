@@ -1,6 +1,6 @@
 import { Phone } from "lucide-react";
 import { asset1, bg } from "../utils/ImgUtils";
-import HeroAnimation from "./HeroAnimation";
+import HeroAnimation from "./AminamtionPages/HeroAnimation";
 import { Link } from "react-router";
 import ServicesAnimation from "./AminamtionPages/ServicesAnimation";
 

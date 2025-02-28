@@ -10,7 +10,7 @@ export default function Navbar() {
       {/* -- Top nav bar -- */}
       <div className=" bg-[var(--main-color)] text-[var(--text-color)] w-full ">
         <div className="container mx-auto flex justify-center gap-10 items-center  px-12">
-          <p className="text-[10px] ">mcstechnology.in | Mob: +91-9315973373</p>
+          <p className="text-[10px] ">Mob: +91-9315973373</p>
           <div className="flex gap-2">
             <a href="tel:+917065995901">
               <button aria-label="Call Now" className="flex p-1 ">

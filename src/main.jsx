@@ -1,11 +1,11 @@
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import { useEffect, useState } from "react";
 import "./index.css";
 import Navbar from "./Pages/Navbar";
 import Footer from "./components/common/Footer";
 import Home from "./components/layout/Home";
 import Services from "./Pages/Services";
-
 import Faq from "./Pages/Faq";
 import ContactUs from "./Pages/ContactUS";
 import NotFound from "./Pages/NotFound";
@@ -17,25 +17,45 @@ import SmoothScroll from "./utils/smootScroll";
 import CanvasCursor from "./components/CanvasCursor";
 import Bis from "./ServicePages/Bis";
 
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return isMobile;
+};
+
 // Layout Component for Public Pages
-const Layout = () => (
-  <div>
-    <CanvasCursor /> {/* Adding animated cursor effect */}
-    <SmoothScroll /> {/* Enable smooth scrolling */}
-    <Navbar />
-    <Outlet />
-    <Footer />
-  </div>
-);
+const Layout = () => {
+  const isMobile = useIsMobile();
+
+  return (
+    <div>
+      {!isMobile && <CanvasCursor />} {/* Render only on larger screens */}
+      <SmoothScroll />
+      <Navbar />
+      <Outlet />
+      <Footer />
+    </div>
+  );
+};
 
 // Layout for Admin Panel (Allows Nested Routes)
-const AdminLayout = () => (
-  <div>
-    <CanvasCursor /> {/* Adding animated cursor effect */}
-    <SmoothScroll /> {/* Enable smooth scrolling in admin */}
-    <AdminPanel />
-  </div>
-);
+const AdminLayout = () => {
+  const isMobile = useIsMobile();
+
+  return (
+    <div>
+      {!isMobile && <CanvasCursor />} {/* Render only on larger screens */}
+      <SmoothScroll />
+      <AdminPanel />
+    </div>
+  );
+};
 
 const router = createBrowserRouter([
   {
