@@ -12,13 +12,9 @@ const Hero = () => {
     >
       <div className="w-full flex justify-between items-center mt-[-60px] lg:mt-[-120px]">
         <div className="container flex flex-col lg:flex-row justify-center items-center ">
+          <img src={asset1} className=" absolute  top-40 left-40" />
           <div className="px-4 sm:px-6 lg:px-0 w-full relative ">
             <>
-              <img
-                src={asset1}
-                className=" absolute bg-right  left-24 top-48"
-              />
-
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-black text-400 mb-4  text-white  transition-colors duration-300 ">
                 Best consulting firm for{" "}
                 <span className="text-red-400">BIS, EPR </span> and various
@@ -52,14 +48,14 @@ const Hero = () => {
                     +91-7065995901
                   </button>
                 </a>
-                <div className="absolute left-[-100px] bottom-[-180px]">
+                <div className="absolute  left-60 lg:left-[-100px] lg:bottom-[-180px]">
                   <ServicesAnimation />
                 </div>
               </div>
               {/* <img src={asset18} className="lg:absolute " /> */}
             </>
           </div>
-          <div className="hidden  w-40 h-40  lg:w-1/2  lg:flex justify-center items-center ">
+          <div className="hidden md:w-40 h-40  lg:w-1/2  lg:flex justify-center items-center ">
             <Link to="/contact">
               <HeroAnimation />
             </Link>
