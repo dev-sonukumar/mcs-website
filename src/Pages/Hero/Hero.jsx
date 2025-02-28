@@ -1,8 +1,8 @@
 import { Phone } from "lucide-react";
-import { asset1, bg } from "../utils/ImgUtils";
-import HeroAnimation from "./AminamtionPages/HeroAnimation";
+import { asset1, bg } from "../../utils/ImgUtils";
+import HeroAnimation from "../AminamtionPages/HeroAnimation";
 import { Link } from "react-router";
-import ServicesAnimation from "./AminamtionPages/ServicesAnimation";
+import ServicesAnimation from "../AminamtionPages/ServicesAnimation";
 
 const Hero = () => {
   return (
@@ -48,7 +48,7 @@ const Hero = () => {
                     +91-7065995901
                   </button>
                 </a>
-                <div className="absolute  left-60 lg:left-[-100px] lg:bottom-[-180px]">
+                <div className="absolute  lg:left-[-100px] lg:bottom-[-180px]">
                   <ServicesAnimation />
                 </div>
               </div>

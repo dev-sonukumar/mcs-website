@@ -8,7 +8,6 @@ import {
 import { ArrowUpRight } from "lucide-react";
 import { useEffect, useState } from "react";
 
-
 export default function ExploreServices() {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -54,7 +53,7 @@ export default function ExploreServices() {
   return (
     <motion.div
       id="explore-services"
-      className="w-40 h-40 border rounded-full flex justify-center items-center overflow-hidden transition-all ease-in-out relative"
+      className="w-36 h-36 lg:w-40 lg:h-40 border rounded-full flex justify-center items-center overflow-hidden transition-all ease-in-out relative"
       style={{ x, y, scale, translateX: scrollX }}
       animate={controls}
       onMouseEnter={() => {
@@ -75,12 +74,13 @@ export default function ExploreServices() {
       />
 
       {/* Text Layer */}
-      <div className="flex flex-col items-center gap-3">
-        <h2 className="text-lg font-bold text-center flex items-center gap-2 z-10 text-[var(--gray-color4)]">
-          Explore Our Services
-        </h2>
-        <ArrowUpRight className="text-[var(--gray-color4)] z-10" />
-      </div>
+
+      <h2 className="text-lg font-bold text-left p-5 justify-center  z-10 text-[var(--gray-color4)] relative">
+        Explore Our Services{" "}
+        <span>
+          <ArrowUpRight className="text-[var(--gray-color4)] absolute bottom-5 left-24 lg:left-28" />
+        </span>
+      </h2>
     </motion.div>
   );
 }
