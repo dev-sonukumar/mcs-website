@@ -1,4 +1,10 @@
-import { motion, useMotionValue, useAnimation } from "framer-motion";
+import {
+  motion,
+  useMotionValue,
+  useAnimation,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -7,8 +13,12 @@ export default function ExploreServices() {
   const y = useMotionValue(0);
   const scale = useMotionValue(1);
   const controls = useAnimation();
+  const { scrollY } = useScroll(); // Get scroll position
+
   const [isHovered, setIsHovered] = useState(false);
-  const [isNear, setIsNear] = useState(false);
+
+  // Moves div from 0 to -100vw (fully out of the screen)
+  const scrollX = useTransform(scrollY, [0, 400], ["0%", "-100vw"]);
 
   useEffect(() => {
     const handleMouseMove = (event) => {
@@ -18,23 +28,20 @@ export default function ExploreServices() {
       const { left, top, width, height } = div.getBoundingClientRect();
       const { clientX, clientY } = event;
 
-      // Calculate distance from the div's center
       const centerX = left + width / 2;
       const centerY = top + height / 2;
       const distance = Math.sqrt(
         Math.pow(clientX - centerX, 2) + Math.pow(clientY - centerY, 2)
       );
 
-      if (distance < width / 2 + 40) {
-        // If cursor is inside or near (20px outside), move the div
-        setIsNear(true);
-        const moveX = ((clientX - left) / width - 0.5) * 30;
-        const moveY = ((clientY - top) / height - 0.5) * 30;
+      if (distance < width / 2 + 50) {
+        // If cursor is near, move slightly
+        const moveX = ((clientX - left) / width - 0.5) * 20;
+        const moveY = ((clientY - top) / height - 0.5) * 20;
         x.set(moveX);
         y.set(moveY);
       } else {
-        // If cursor is too far, reset the position smoothly
-        setIsNear(false);
+        // Reset position smoothly
         controls.start({ x: 0, y: 0, scale: 1 });
       }
     };
@@ -47,15 +54,13 @@ export default function ExploreServices() {
     <motion.div
       id="explore-services"
       className="w-40 h-40 border rounded-full flex justify-center items-center overflow-hidden transition-all ease-in-out relative"
-      style={{ x, y, scale }}
+      style={{ x, y, scale, translateX: scrollX }}
       animate={controls}
       onMouseEnter={() => {
         setIsHovered(true);
-        scale.set(1.05);
+        scale.set(1.08);
       }}
-      onMouseLeave={() => {
-        setIsHovered(false);
-      }}
+      onMouseLeave={() => setIsHovered(false)}
     >
       {/* Liquid Fill Background (Diagonal Fill Effect) */}
       <motion.div
@@ -65,7 +70,7 @@ export default function ExploreServices() {
           width: isHovered ? "100%" : "0%",
           height: isHovered ? "100%" : "0%",
         }} // Expanding diagonally
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
       />
 
       {/* Text Layer */}
@@ -73,7 +78,7 @@ export default function ExploreServices() {
         <h2 className="text-lg font-bold text-center flex items-center gap-2 z-10 text-[var(--gray-color4)]">
           Explore Our Services
         </h2>
-        <ArrowUpRight className="text-[var(--gray-color4)]  z-10" />
+        <ArrowUpRight className="text-[var(--gray-color4)] z-10" />
       </div>
     </motion.div>
   );

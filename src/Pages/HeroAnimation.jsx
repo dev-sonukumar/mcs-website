@@ -1,12 +1,21 @@
-import { motion } from "framer-motion";
-
-import { Star } from "lucide-react"; // Replace with your actual Star component
+import { motion, useScroll, useTransform } from "framer-motion";
+import { Star } from "lucide-react";
 import { asset } from "@/utils/ImgUtils";
 
 const About = () => {
+  const { scrollY } = useScroll();
+
+  // Animate opacity and Y position
+  const opacity = useTransform(scrollY, [0, 200], [1, 0]);
+  const y = useTransform(scrollY, [0, 200], [0, -50]);
+
   return (
-    <div className=" ml-52 mt-10 lg:mt-0 lg:ml-32 mb-12 bdr">
-      <div className=" flex justify-center items-center bdr ">
+    <motion.div
+      className="ml-52 mt-10 lg:mt-0 lg:ml-32 mb-12"
+      style={{ opacity, y }} // Smooth scroll effect
+      transition={{ duration: 0.5, ease: "easeOut" }}
+    >
+      <div className="flex justify-center items-center">
         <motion.div
           className="absolute"
           animate={{ rotate: [0, 360] }}
@@ -15,13 +24,14 @@ const About = () => {
           <div className="w-40 h-40 lg:w-56 lg:h-56 border-2 border-gray-300 rounded-full flex justify-center items-center">
             <img
               src={asset}
-              className=" w-32 h-32 lg:w-48 lg:h-48 bg-white rounded-full object-cover shadow-lg"
+              className="w-32 h-32 lg:w-48 lg:h-48 bg-white rounded-full object-cover shadow-lg"
+              alt="Profile"
             />
           </div>
         </motion.div>
-        <Star className=" text-yellow-500  w-6 h-6  z-40" />
+        <Star className="text-yellow-500 w-6 h-6 z-40" />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -5,7 +5,7 @@ import Navbar from "./Pages/Navbar";
 import Footer from "./components/common/Footer";
 import Home from "./components/layout/Home";
 import Services from "./Pages/Services";
-import Post from "./Pages/Post";
+
 import Faq from "./Pages/Faq";
 import ContactUs from "./Pages/ContactUS";
 import NotFound from "./Pages/NotFound";
@@ -15,6 +15,7 @@ import AdminProfile from "./Pages/admin/AdminProfile";
 import BisFaqManager from "./components/admin/BisFaqManager";
 import SmoothScroll from "./utils/smootScroll";
 import CanvasCursor from "./components/CanvasCursor";
+import Bis from "./ServicePages/Bis";
 
 // Layout Component for Public Pages
 const Layout = () => (
@@ -43,7 +44,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: "services", element: <Services /> },
-      { path: "services/:post", element: <Post /> },
+      { path: "services/bis", element: <Bis /> },
       { path: "faqs", element: <Faq /> },
       { path: "contact", element: <ContactUs /> },
       { path: "*", element: <NotFound /> }, // Catch-all route
