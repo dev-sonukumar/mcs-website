@@ -34,6 +34,9 @@ const brand17 = "/assets/brand/brand17.webp";
 const logo = "/assets/logo.png";
 const about1 = "/assets/hero/about1.webp";
 const about2 = "/assets/hero/about2.webp";
+const about3 = "/assets/hero/about3.webp";
+const about4 = "/assets/hero/about4.webp";
+const about5 = "/assets/hero/about5.webp";
 
 export {
   bis,
@@ -69,4 +72,7 @@ export {
   logo,
   about1,
   about2,
+  about3,
+  about4,
+  about5,
 };

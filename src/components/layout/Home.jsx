@@ -3,7 +3,7 @@ import HappyClientServicesCount from "../../Pages/Hero/HappyClientServiceCount";
 import Hero from "../../Pages/Hero/Hero";
 import ImageSlider from "../../Pages/ImageSlider";
 import OurServices from "../../Pages/OurServices";
-import About from "@/Pages/About";
+import About from "@/Pages/HeroAbout";
 import OurApproach from "@/Pages/Hero/OurApproach";
 
 const Home = () => {
@@ -16,8 +16,6 @@ const Home = () => {
       <HappyClientServicesCount />
       <ImageSlider />
       <ScrollDocument />
-      {/* <PostPage /> */}
-      {/* <Post /> */}
     </div>
   );
 };

@@ -2,6 +2,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {
+  asset1,
+  bg,
   brand1,
   brand10,
   brand11,
@@ -72,10 +74,15 @@ const ImageSlider = () => {
   ];
 
   return (
-    <div className="bg-[var(--main-color2)]  my-12">
+    <div
+      className="bg-no-repeat bg-cover  flex my-12 py-12 "
+      style={{ backgroundImage: `url(${bg})` }}
+    >
       <div className="relative container mx-auto px-4 py-8 ">
-        {/* <img src={asset11} className="absolute left-10 hidden lg:block" /> */}
-        <h2 className="text-2xl font-bold mb-6 text-center">Brands</h2>
+        <img src={asset1} className="absolute left-10 hidden lg:block" />
+        <h2 className="text-2xl text-[var(--gray-color5)] font-bold mb-6 text-center">
+          Brands
+        </h2>
 
         <Slider {...settings}>
           {images.map((image, index) => (
@@ -84,7 +91,7 @@ const ImageSlider = () => {
                 <img
                   src={image}
                   alt={`Slide ${index + 1}`}
-                  className="w-full h-48 object-contain"
+                  className="w-full object-contain"
                 />
               </div>
             </div>

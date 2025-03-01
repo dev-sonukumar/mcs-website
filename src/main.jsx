@@ -16,6 +16,7 @@ import BisFaqManager from "./components/admin/BisFaqManager";
 import SmoothScroll from "./utils/smootScroll";
 import CanvasCursor from "./components/CanvasCursor";
 import Bis from "./ServicePages/Bis";
+import AboutUs from "./Pages/AboutUs";
 
 const useIsMobile = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -64,6 +65,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: "services", element: <Services /> },
+      { path: "about", element: <AboutUs /> },
       { path: "services/bis", element: <Bis /> },
       { path: "faqs", element: <Faq /> },
       { path: "contact", element: <ContactUs /> },

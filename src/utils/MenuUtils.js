@@ -7,7 +7,6 @@ import {
   Play,
   MapPin,
   PanelsTopLeft,
-  ChevronRight,
 } from "lucide-react";
 
 export const Menus = [
@@ -16,6 +15,13 @@ export const Menus = [
     desc: "Welcome to the homepage",
     icon: PanelsTopLeft,
     path: "/",
+    gridCols: 1,
+  },
+  {
+    name: "About",
+    desc: "Welcome to the About Page",
+    icon: PanelsTopLeft,
+    path: "/about",
     gridCols: 1,
   },
   {
