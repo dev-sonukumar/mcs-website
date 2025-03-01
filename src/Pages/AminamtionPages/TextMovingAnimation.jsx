@@ -7,7 +7,7 @@ const TextMovingAnimation = ({ spanText, mainText }) => {
   const secondText = useRef(null);
   let xPercent = 0;
   let direction = 1;
-  let speedFactor = 0.005; // Slower base speed
+  let speedFactor = 0.008; // Slower base speed
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -29,13 +29,13 @@ const TextMovingAnimation = ({ spanText, mainText }) => {
       trigger: document.documentElement,
       start: "top top",
       end: "bottom bottom",
-      scrub: 0.3, // Smoother interaction
+      scrub: 0.5, // Smoother interaction
       onUpdate: (e) => {
         direction = e.direction;
         const velocity = Math.abs(e.getVelocity());
 
         // Adjust speed dynamically (slower upper limit)
-        speedFactor = Math.max(0.005, Math.min(velocity / 7000, 0.1));
+        speedFactor = Math.max(0.008, Math.min(velocity / 7000, 0.2));
       },
     });
 

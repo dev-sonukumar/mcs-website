@@ -1,7 +1,9 @@
 import ImageText from "@/components/ReuseComponents/ImageText";
+import { motion } from "framer-motion";
 
 import { about3 } from "@/utils/ImgUtils";
 import TextMovingAnimation from "./AminamtionPages/TextMovingAnimation";
+import { fadeIn } from "@/utils/varients";
 
 const data = [
   {
@@ -15,9 +17,14 @@ const data = [
 
 const AboutUs = () => {
   return (
-    <div>
-      <section>
-        <div className="mt-20 mb-10">
+    <motion.div
+      variants={fadeIn("up", 0.2)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.7 }}
+    >
+      <section className="mt-20 mb-10">
+        <div>
           <ImageText {...data[0]} />
         </div>
         <TextMovingAnimation
@@ -25,7 +32,7 @@ const AboutUs = () => {
           mainText="Our Trusted Clients Say."
         />
       </section>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,8 +1,9 @@
-import { about2, } from "@/utils/ImgUtils";
+import { about2 } from "@/utils/ImgUtils";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router";
 import { motion } from "framer-motion";
-import TextMovingAnimation from "./AminamtionPages/TextMovingAnimation";
+import { fadeIn } from "@/utils/varients";
+import TextMovingAnimation from "../AminamtionPages/TextMovingAnimation";
 
 const HeroAbout = () => {
   return (
@@ -19,14 +20,26 @@ const HeroAbout = () => {
       {/* ----- About ----- */}
 
       <section className="w-full  container flex  flex-col lg:flex-row  gap-10 lg:gap-20 text-[var(--color-black)] ">
-        <div>
+        <motion.div
+          variants={fadeIn("right", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.7 }}
+        >
           <img src={about2} alt="About Us" />
-        </div>
-        <div className="lg:w-1/2  ">
+        </motion.div>
+        <motion.div
+          variants={fadeIn("left", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.7 }}
+          className="lg:w-1/2  "
+        >
           <motion.h2
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.5 }}
+            variants={fadeIn("up", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.7 }}
             className="font-bold text-3xl lg:text-5xl lg:mb-10"
           >
             Who we are ?
@@ -50,7 +63,7 @@ const HeroAbout = () => {
               <ArrowUpRight className="text-[var(--color-black)] transition-colors group-hover:text-white" />
             </Link>
           </div>
-        </div>
+        </motion.div>
       </section>
     </div>
   );

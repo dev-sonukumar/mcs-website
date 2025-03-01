@@ -75,7 +75,7 @@ const ImageSlider = () => {
 
   return (
     <div
-      className="bg-no-repeat bg-cover  flex my-12 py-12 "
+      className="bg-no-repeat bg-cover  flex my-12 lg:py-12 "
       style={{ backgroundImage: `url(${bg})` }}
     >
       <div className="relative container mx-auto px-4 py-8 ">

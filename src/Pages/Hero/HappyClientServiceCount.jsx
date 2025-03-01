@@ -1,4 +1,5 @@
-import { color } from "framer-motion";
+import { fadeIn } from "@/utils/varients";
+import { motion } from "framer-motion";
 import { CalendarDays, FolderOpenDot, Globe, Smile } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 
@@ -123,7 +124,11 @@ const HappyClientServicesCount = () => {
   }, [inView]);
 
   return (
-    <div
+    <motion.div
+      variants={fadeIn("up", 0.2)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.7 }}
       ref={statsRef}
       className="  flex flex-col justify-center items-center py-10 lg:mt-12  lg:my-12 "
     >
@@ -157,7 +162,7 @@ const HappyClientServicesCount = () => {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

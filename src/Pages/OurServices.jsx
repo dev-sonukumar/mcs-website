@@ -1,4 +1,4 @@
-import { bee, bis, epr, isi, tec, wpc } from "../utils/ImgUtils";
+import { bee, bg, bis, epr, isi, tec, wpc } from "../utils/ImgUtils";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
@@ -66,7 +66,10 @@ const cardVariants = {
 
 const OurServices = () => {
   return (
-    <div className="bg-[var(--main-color2)] lg:px-5 py-10 pb-20 ">
+    <div
+      className="bg-no-repeat bg-cover lg:px-5 py-10 pb-20 "
+      style={{ backgroundImage: `url(${bg})` }}
+    >
       <div className="container mx-auto ">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}

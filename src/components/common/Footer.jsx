@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 const Footer = () => {
   return (
-    <footer className=" text-[var(--black-color)] pt-20">
+    <footer className=" text-[var(--black-color)] pt-20 bg-[var(--gray-color5)]">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 text-left ">
           {/* Column 1: About Us */}
@@ -77,7 +77,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section: Copyright */}
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center">
+        <div className="border-t border-gray-700 mt-8 py-8 text-center">
           <p className="text-sm ">
             &copy; {new Date().getFullYear()} Your Company. All rights reserved.
           </p>

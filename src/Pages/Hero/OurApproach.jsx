@@ -1,4 +1,5 @@
 import { about4, about5 } from "@/utils/ImgUtils";
+import { fadeIn } from "@/utils/varients";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router";
@@ -38,15 +39,27 @@ const OurApproach = () => {
               Our Approach
             </button>
 
-            <h2 className="text-5xl font-extrabold text-gray-900 mb-10">
+            <motion.h2
+              variants={fadeIn("up", 0.2)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.7 }}
+              className="text-5xl font-extrabold text-gray-900 mb-10"
+            >
               Expertise in Strategy, Design, and Development
-            </h2>
-            <p className="text-gray-700 text-lg mb-14 max-w-3xl mx-auto">
+            </motion.h2>
+            <motion.p
+              variants={fadeIn("up", 0.2)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.7 }}
+              className="text-gray-700 text-lg mb-14 max-w-3xl mx-auto"
+            >
               To build a successful digital solution, we follow a
               well-maintained structured approach that ensures functionality,
               durability, and scalability, aligning with BIS certification
               standards.
-            </p>
+            </motion.p>
             <div className="flex items-center gap-5 mt-5 relative">
               <h2 className="font-semibold">Learn More</h2>
 
@@ -63,11 +76,11 @@ const OurApproach = () => {
 
         {/* Right Section - Approach Cards */}
         <div className="lg:w-1/2">
-          <div className="grid md:grid-cols-2 gap-4 w-[500px]">
+          <div className="grid md:grid-cols-2 gap-4 w-full lg:w-[500px]">
             {approachData.map((item, index) => (
               <motion.div
                 key={index}
-                className="flex  justify-center relative bg-blue-600 text-white p-8 rounded-xl shadow-md overflow-hidden group"
+                className="flex  justify-center relative bg-blue-500 text-white p-8 rounded-xl shadow-md overflow-hidden group"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
