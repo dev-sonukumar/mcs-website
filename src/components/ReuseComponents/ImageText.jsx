@@ -1,11 +1,18 @@
 import { ArrowUpRight, CircleDot } from "lucide-react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import { asset2 } from "@/utils/ImgUtils";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/utils/varients";
 
 const ImageText = ({ img, heading, para, aboutBtn, btnLink }) => {
   return (
-    <section className="w-full container flex flex-col lg:flex-row gap-10 lg:gap-20 text-[var(--color-black)]">
+    <motion.section
+      variants={fadeIn("up", 0.2)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.7 }}
+      className="w-full container flex flex-col lg:flex-row gap-10 lg:gap-20 text-[var(--color-black)]"
+    >
       {/* Image Section */}
       <div>
         <img src={img} alt="About Us" className="w-full h-auto" />
@@ -67,7 +74,7 @@ const ImageText = ({ img, heading, para, aboutBtn, btnLink }) => {
           />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

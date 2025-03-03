@@ -23,7 +23,7 @@ const AboutUs = () => {
       whileInView={"show"}
       viewport={{ once: false, amount: 0.7 }}
     >
-      <section className="mt-20 mb-10">
+      <section className="mt-20 mb-10 overflow-hidden">
         <div>
           <ImageText {...data[0]} />
         </div>
