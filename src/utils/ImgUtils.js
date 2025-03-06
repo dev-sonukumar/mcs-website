@@ -1,5 +1,8 @@
 const bis = "/assets/service/bis/bis.webp";
 const bis_img1 = "/assets/service/bis/bis-img1.png";
+const bis_img2 = "/assets/service/bis/bis-img2.png";
+const bis_img3 = "/assets/service/bis/bis-img3.png";
+const bis_img4 = "/assets/service/bis/bis-img4.png";
 const bee = "/assets/service//bee/bee.webp";
 const epr = "/assets/service/epr/epr.webp";
 const isi = "/assets/service/isi/isi.webp";
@@ -42,6 +45,9 @@ const about5 = "/assets/hero/about5.webp";
 export {
   bis,
   bis_img1,
+  bis_img2,
+  bis_img3,
+  bis_img4,
   bee,
   epr,
   isi,

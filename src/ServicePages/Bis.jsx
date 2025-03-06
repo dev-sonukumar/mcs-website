@@ -1,4 +1,4 @@
-import { bis_img1 } from "@/utils/ImgUtils";
+import { bis_img1, bis_img2, bis_img3 } from "@/utils/ImgUtils";
 
 const BISRegistration = () => {
   return (
@@ -6,7 +6,7 @@ const BISRegistration = () => {
       <div className="container mx-auto md:p-6 md:pt-10 ">
         <h1 className=" text-3xl font-black  lg:text-center mb-10 lg:mb-20 text-[var(--color-black)] ">
           <span className="text-red-400">BIS</span> Registration for -
-           Electronic & IT Products
+          Electronic & IT Products
         </h1>
 
         <section className="mb-6 md:mt-20">
@@ -87,6 +87,7 @@ const BISRegistration = () => {
             (BIS) has made certification mandatory for these products to ensure
             quality, safety, and reliability.
           </p>
+          <img src={bis_img2} alt="bis" className="my-10" />
           <h3 className="text-[var(--color-black)] font-bold mt-4 mb-2">
             Categories of Products Under CRS
           </h3>
@@ -182,6 +183,7 @@ const BISRegistration = () => {
           <h2 className="font-black mb-4 ">
             Get Certified with Expert Assistance!
           </h2>
+          <img src={bis_img3} alt="bis" className="my-10" />
           <p>
             Looking for hassle-free BIS certification? Our experts provide
             end-to-end assistance, ensuring fast approvals and compliance.
