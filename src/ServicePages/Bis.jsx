@@ -2,11 +2,11 @@ import { bis_img1 } from "@/utils/ImgUtils";
 
 const BISRegistration = () => {
   return (
-    <article className="my-10 serviceArticle ">
+    <article className="my-10 serviceArticle text-justify">
       <div className="container mx-auto md:p-6 md:pt-10 ">
         <h1 className=" text-3xl font-black  lg:text-center mb-10 lg:mb-20 text-[var(--color-black)] ">
-          <span className="text-red-400">BIS</span> Registration for Electronic
-          & IT Products
+          <span className="text-red-400">BIS</span> Registration for -
+           Electronic & IT Products
         </h1>
 
         <section className="mb-6 md:mt-20">
