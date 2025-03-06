@@ -13,124 +13,6 @@
   margin: 0 auto;
 }
 
-/* Responsive adjustments */
-@media (min-width: 640px) {
-  .container {
-    width: 95%;
-    max-width: 640px;
-  }
-
-  /* ---- Services Section ------ */
-  .serviceArticle h1 {
-    font-size: 1.7rem;
-  }
-  .serviceArticle h2 {
-    font-size: 1.3rem;
-  }
-  .serviceArticle h3 {
-    font-size: 1.2rem;
-  }
-  .serviceArticle p {
-    font-size: 0.95rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-
-  .serviceArticle h1 {
-    font-size: 2rem;
-  }
-  .serviceArticle h2 {
-    font-size: 1.4rem;
-  }
-  .serviceArticle h3 {
-    font-size: 1.3rem;
-  }
-  .serviceArticle p {
-    font-size: 1rem;
-  }
-}
-
-@media (min-width: 925px) {
-  .container {
-    max-width: 925px;
-  }
-
-  .serviceArticle h1 {
-    font-size: 2.2rem;
-  }
-  .serviceArticle h2 {
-    font-size: 1.5rem;
-  }
-  .serviceArticle h3 {
-    font-size: 1.3rem;
-  }
-  .serviceArticle p {
-    font-size: 1rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-    padding: 0 100px;
-  }
-
-  .serviceArticle h1 {
-    font-size: 2.4rem;
-  }
-  .serviceArticle h2 {
-    font-size: 1.6rem;
-  }
-  .serviceArticle h3 {
-    font-size: 1.4rem;
-  }
-  .serviceArticle p {
-    font-size: 1rem;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-
-  .serviceArticle h1 {
-    font-size: 2.5rem;
-  }
-  .serviceArticle h2 {
-    font-size: 1.7rem;
-  }
-  .serviceArticle h3 {
-    font-size: 1.4rem;
-  }
-  .serviceArticle p {
-    font-size: 1.05rem;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
-
-  .serviceArticle h1 {
-    font-size: 2.7rem;
-  }
-  .serviceArticle h2 {
-    font-size: 2rem;
-  }
-  .serviceArticle h3 {
-    font-size: 1.5rem;
-  }
-  .serviceArticle p {
-    font-size: 1.1rem;
-  }
-}
-
 :root {
   --main-color: #0e1b2c;
   --main-color2: #182555;
@@ -139,19 +21,31 @@
   --main-color5: #097969;
   --main-color6: #06594f;
   --text-color: #ffffff;
-  --color-black: #28282b;
+  --color-black: #0f0f0f;
+  --heading-color: #333333;
+  --paragraph-color: #4f4f4f;
   --gray-color: #8f8f8f;
   --gray-color2: #919090;
   --gray-color3: #a7a7a7;
   --gray-color4: #a8a8a8;
   --gray-color5: #e8eaed;
-  --color-white: #fdfdfd;
+  --color-white: #ffffff;
   --card-color: #f6eee8;
 }
 
 body {
   @apply font-inter;
   background-color: var(--color-white);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--heading-color);
+}
+p {
+  color: var(--paragraph-color);
 }
 
 @layer components {
@@ -270,6 +164,125 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* ----  custom css ---- */
+/* Responsive adjustments */
+@media (min-width: 640px) {
+  .container {
+    width: 95%;
+    max-width: 640px;
+  }
+
+  /* ---- Services Section ------ */
+  .serviceArticle h1 {
+    font-size: 1.7rem;
+  }
+  .serviceArticle h2 {
+    font-size: 1.3rem;
+  }
+  .serviceArticle h3 {
+    font-size: 1.2rem;
+  }
+  .serviceArticle p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .serviceArticle h1 {
+    font-size: 2rem;
+  }
+  .serviceArticle h2 {
+    font-size: 1.4rem;
+  }
+  .serviceArticle h3 {
+    font-size: 1.3rem;
+  }
+  .serviceArticle p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 925px) {
+  .container {
+    max-width: 925px;
+  }
+
+  .serviceArticle h1 {
+    font-size: 2.2rem;
+  }
+  .serviceArticle h2 {
+    font-size: 1.5rem;
+  }
+  .serviceArticle h3 {
+    font-size: 1.3rem;
+  }
+  .serviceArticle p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    padding: 0 100px;
+  }
+
+  .serviceArticle h1 {
+    font-size: 2.4rem;
+  }
+  .serviceArticle h2 {
+    font-size: 1.6rem;
+  }
+  .serviceArticle h3 {
+    font-size: 1.4rem;
+  }
+  .serviceArticle p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+
+  .serviceArticle h1 {
+    font-size: 2.5rem;
+  }
+  .serviceArticle h2 {
+    font-size: 1.7rem;
+  }
+  .serviceArticle h3 {
+    font-size: 1.4rem;
+  }
+  .serviceArticle p {
+    font-size: 1.05rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+
+  .serviceArticle h1 {
+    font-size: 2.7rem;
+  }
+  .serviceArticle h2 {
+    font-size: 2rem;
+  }
+  .serviceArticle h3 {
+    font-size: 1.5rem;
+  }
+  .serviceArticle p {
+    font-size: 1.1rem;
   }
 }
 

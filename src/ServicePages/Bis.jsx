@@ -1,16 +1,20 @@
 import { bis_img1, bis_img2, bis_img3 } from "@/utils/ImgUtils";
+import { Phone } from "lucide-react";
 
 const BISRegistration = () => {
   return (
     <article className="my-10 serviceArticle text-justify">
       <div className="container mx-auto md:p-6 md:pt-10 ">
-        <h1 className=" text-3xl font-black  lg:text-center mb-10 lg:mb-20 text-[var(--color-black)] ">
+        {/* ------ Main Hading-------- */}
+
+        <h1 className=" text-3xl font-extrabold  lg:text-center mb-5 lg:mb-20">
           <span className="text-red-400">BIS</span> Registration for -
           Electronic & IT Products
         </h1>
 
-        <section className="mb-6 md:mt-20">
-          <h2 className=" font-black  my-4 ">Introduction</h2>
+        {/* ------ Section 1 -------- */}
+        <section className="mb-6 ">
+          <h2 className=" my-4 font-extrabold">Introduction</h2>
           <p>
             BIS Registration is the process of obtaining a license from the
             Bureau of Indian Standards (BIS) for products that comply with
@@ -37,7 +41,7 @@ const BISRegistration = () => {
             people, animals, and plants. Additionally, it aims to prevent unfair
             trade practices.
           </p>
-          <h3 className=" text-[var(--color-black)] font-bold mt-4 mb-2">
+          <h3 className=" font-extrabold mt-4 mb-2">
             BIS Registration for Electronics & IT Products
           </h3>
           <p>
@@ -51,8 +55,9 @@ const BISRegistration = () => {
           </p>
         </section>
 
+        {/* ------ Section 2 -------- */}
         <section className="mb-6">
-          <h3 className="text-[var(--color-black)] font-bold mt-4 mb-2">
+          <h3 className="font-extrabold mt-4 mb-2">
             Compulsory Registration Scheme (CRS)
           </h3>
           <p>
@@ -75,9 +80,10 @@ const BISRegistration = () => {
             the BIS (Conformity Assessment) Regulations, 2018.
           </p>
         </section>
+        {/* ------ Section 3 -------- */}
 
         <section className="mb-6">
-          <h2 className="font-black text-400 my-4 ">
+          <h2 className="font-extrabold my-4 ">
             Products Covered Under the Compulsory Registration Scheme (CRS)
           </h2>
           <p>
@@ -87,14 +93,14 @@ const BISRegistration = () => {
             (BIS) has made certification mandatory for these products to ensure
             quality, safety, and reliability.
           </p>
-          <img src={bis_img2} alt="bis" className="my-10" />
-          <h3 className="text-[var(--color-black)] font-bold mt-4 mb-2">
+          <h2 className="font-black text-400 my-4 ">
             Categories of Products Under CRS
-          </h3>
+          </h2>
           <p>Here are some key product categories covered under the CRS:</p>
+          <img src={bis_img2} alt="bis" className="my-10" />
           <section>
             <div>
-              <h3 className="text-[var(--color-black)] font-bold mt-4 mb-2">
+              <h3 className="font-bold mt-4 mb-2">
                 1. Information Technology (IT) and Audio-Visual Equipment
               </h3>
             </div>
@@ -110,7 +116,7 @@ const BISRegistration = () => {
 
           <section>
             <div>
-              <h3 className=" text-[var(--color-black)] font-bold mt-4 mb-2">
+              <h3 className="  font-bold mt-4 mb-2">
                 2. Power Adaptors and Power Supplies
               </h3>
             </div>
@@ -124,7 +130,7 @@ const BISRegistration = () => {
 
           <section>
             <div>
-              <h3 className="text-[var(--color-black)] font-bold mt-4 mb-2">
+              <h3 className="font-bold mt-4 mb-2">
                 3. Lighting and Electrical Equipment
               </h3>
             </div>
@@ -134,9 +140,10 @@ const BISRegistration = () => {
               <li>LED Control Gear</li>
             </ul>
           </section>
+
           <section>
             <h3>
-              <h3 className=" text-[var(--color-black)] font-bold mt-4 mb-2">
+              <h3 className="font-bold mt-4 mb-2">
                 4. Household and Kitchen Appliances
               </h3>
             </h3>
@@ -149,7 +156,7 @@ const BISRegistration = () => {
           </section>
           <section>
             <h3>
-              <h3 className="text-[var(--color-black)] font-bold mt-4 mb-2">
+              <h3 className="font-bold mt-4 mb-2">
                 5. Measurement and Safety Equipment
               </h3>
             </h3>
@@ -159,9 +166,10 @@ const BISRegistration = () => {
               <li>Digital Thermometers</li>
             </ul>
           </section>
+          {/* ------- Section 4 ------- */}
           <section>
             <h3>
-              <h3 className=" text-[var(--color-black)] font-bold mt-4 mb-2">
+              <h3 className="font-bold mt-4 mb-2">
                 6. Other Electronic Devices
               </h3>
             </h3>
@@ -179,15 +187,176 @@ const BISRegistration = () => {
           </p>
         </section>
 
+        {/* ------- Section 4 ------- */}
+
         <section className="mb-6">
-          <h2 className="font-black mb-4 ">
-            Get Certified with Expert Assistance!
+          <h2 className="font-extrabold mb-4 ">
+            BIS Registration Process Under the Compulsory Registration Scheme
+            (CRS)
           </h2>
-          <img src={bis_img3} alt="bis" className="my-10" />
           <p>
-            Looking for hassle-free BIS certification? Our experts provide
-            end-to-end assistance, ensuring fast approvals and compliance.
+            The Bureau of Indian Standards (BIS) has established a Compulsory
+            Registration Scheme (CRS) to ensure that electronic and IT products
+            meet Indian safety and quality standards. Any manufacturer, whether
+            domestic or foreign, must obtain BIS certification before selling
+            their products in the Indian market.
           </p>
+          <img src={bis_img3} alt="bis" className="my-10" />
+          <h3 className=" font-bold mt-4 mb-2">
+            Step-by-Step BIS Registration Process
+          </h3>
+          <h3 className="font-bold mt-4 mb-2">
+            Step 1: Determine Product Eligibility
+          </h3>
+          <ul className="list-disc pl-6">
+            <li>
+              Check if the product falls under the CRS mandatory list on the BIS
+              website.
+            </li>
+            <li>
+              Ensure the product complies with the relevant Indian Standard (IS
+              number) specified by BIS.
+            </li>
+          </ul>
+          <h3 className="font-bold mt-4 mb-2">
+            Step 2: Select a BIS-Recognized Testing Laboratory
+          </h3>
+          <ul className="list-disc pl-6">
+            <li>Choose a BIS-approved laboratory for product testing.</li>
+            <li>
+              Submit product samples for testing as per the applicable Indian
+              Standard.
+            </li>
+          </ul>
+          <h3 className="font-bold mt-4 mb-2">Step 3: Obtain a Test Report</h3>
+          <ul className="list-disc pl-6">
+            <li>
+              The BIS-recognized lab will conduct safety and quality tests on
+              the product.
+            </li>
+            <li>
+              If the product meets the required standards, the lab issues a test
+              report.
+            </li>
+          </ul>
+          <h3 className="font-bold mt-4 mb-2">
+            Step 5: Review and Grant of Registration
+          </h3>
+          <ul className="list-disc pl-6">
+            <li>BIS officials will verify the application and documents.</li>
+            <li>
+              If all requirements are met, BIS grants a registration certificate
+              with a unique BIS registration number.
+            </li>
+            <li>
+              The manufacturer can now use the Standard Mark on their product.
+            </li>
+          </ul>
+          <h3 className="font-bold mt-4 mb-2">
+            Step 6: Compliance and Renewal
+          </h3>
+          <ul className="list-disc pl-6">
+            <li>
+              The registration is valid for two years and must be renewed before
+              expiry.
+            </li>
+            <li>
+              Periodic audits and testing may be conducted to ensure continued
+              compliance.
+            </li>
+          </ul>
+          <h3 className="font-bold mt-4 mb-2">Timeline & Cost</h3>
+          <ul className="list-disc pl-6">
+            <li>
+              The entire process takes 4 to 6 weeks, depending on the testing
+              and BIS approval.
+            </li>
+            <li>
+              The cost varies based on the product type, lab testing fees, and
+              BIS application fees.
+            </li>
+          </ul>
+        </section>
+        {/* ------- Section 5 ------- */}
+        <section className="mb-6">
+          <h2 className="font-extrabold mb-4 ">
+            BIS Registration Requirements – Get Certified with Expert
+            Assistance!
+          </h2>
+          <p>
+            Are you looking to register your product under BIS but feeling
+            overwhelmed by the process? Don't worry—we’ve got you covered! As a
+            trusted BIS registration consultant, we simplify the entire process,
+            ensuring a hassle-free certification experience.
+          </p>
+          <h3 className="font-bold mt-4 mb-2">Why Choose Us?</h3>
+          <div>
+            <p>
+              <span className="font-bold">✔ End-to-End Assistance –</span> From
+              documentation to final certification
+            </p>
+            <p>
+              <span className="font-bold">✔ Faster Approvals –</span> Avoid
+              delays with our expert guidance
+            </p>
+            <p>
+              <span className="font-bold">
+                ✔ BIS-Approved Lab Coordination –
+              </span>{" "}
+              Get accurate testing done effortlessly
+            </p>
+            <p>
+              <span className="font-bold">
+                ✔ Affordable & Transparent Pricing –
+              </span>{" "}
+              No hidden charges!
+            </p>
+          </div>
+        </section>
+        {/* ------- Section 6 ------- */}
+        <section className="mb-6">
+          <h2 className="font-extrabold mb-4 ">
+            Why Struggle When We Can Handle It for You?
+          </h2>
+          <div>
+            <p>
+              💡 Skip the complications—our experts manage everything from
+              testing to certification.
+            </p>
+            <p>
+              🚀 Faster approvals—we know the process inside out, ensuring quick
+              compliance.
+            </p>
+            <p>
+              🔒 100% Compliance Guarantee—stay worry-free with our BIS
+              specialists.
+            </p>
+          </div>
+          <h2 className="font-extrabold my-6">
+            Let’s Get Your Product BIS Certified!
+          </h2>
+          <p>
+            📞 Contact us today for a free consultation and start your
+            registration process hassle-free! 🚀
+          </p>
+          <div className="flex gap-2 font-bold text-red-400 mt-4">
+            <a href="tel:+917065995901">
+              <button
+                aria-label="Call Now"
+                className=" flex items-center font-bold "
+              >
+                +91-7065995901
+              </button>
+            </a>
+            <a href="tel:+917065995901">
+              <button
+                aria-label="Call Now"
+                className=" flex items-center font-bold "
+              >
+                +91-7011310361
+              </button>
+            </a>
+          </div>
         </section>
       </div>
     </article>

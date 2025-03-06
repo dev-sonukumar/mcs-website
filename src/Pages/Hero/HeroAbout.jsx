@@ -21,7 +21,7 @@ const HeroAbout = () => {
 
       <section className="w-full  container flex  flex-col lg:flex-row  gap-10 lg:gap-20 text-[var(--color-black)] ">
         <motion.div
-          variants={fadeIn("right", 0.2)}
+          variants={fadeIn("up", 0.2)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.7 }}
@@ -29,21 +29,13 @@ const HeroAbout = () => {
           <img src={about2} alt="About Us" />
         </motion.div>
         <motion.div
-          variants={fadeIn("left", 0.2)}
+          variants={fadeIn("up", 0.2)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.7 }}
           className="lg:w-1/2  "
         >
-          <motion.h2
-            variants={fadeIn("up", 0.2)}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.7 }}
-            className="font-bold text-3xl lg:text-5xl lg:mb-10"
-          >
-            Who we are ?
-          </motion.h2>
+          <h2 className="font-bold text-3xl lg:text-5xl mb-4">Who we are ?</h2>
 
           <p className="pt-5 text-[var(--gray-color)]  lg:mb-10">
             MCS Technology Inc is a New Delhi (India) based certified service
