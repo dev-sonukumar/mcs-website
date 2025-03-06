@@ -4,7 +4,7 @@ const BISRegistration = () => {
   return (
     <article className="my-10 serviceArticle ">
       <div className="container mx-auto md:p-6 md:pt-10 ">
-        <h1 className="font-black  lg:text-center mb-10 lg:mb-20 text-[var(--color-black)] ">
+        <h1 className=" text-lg font-black  lg:text-center mb-10 lg:mb-20 text-[var(--color-black)] ">
           <span className="text-red-400">BIS</span> Registration for Electronic
           & IT Products
         </h1>
