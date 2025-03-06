@@ -1,9 +1,10 @@
-const bis = "/assets/service/bis.webp";
-const bee = "/assets/service/bee.webp";
-const epr = "/assets/service/epr.webp";
-const isi = "/assets/service/isi.webp";
-const tec = "/assets/service/tec.webp";
-const wpc = "/assets/service/wpc.webp";
+const bis = "/assets/service/bis/bis.webp";
+const bis_img1 = "/assets/service/bis/bis-img1.png";
+const bee = "/assets/service//bee/bee.webp";
+const epr = "/assets/service/epr/epr.webp";
+const isi = "/assets/service/isi/isi.webp";
+const tec = "/assets/service/tec/tec.webp";
+const wpc = "/assets/service/wpc/wpc.webp";
 
 const asset = "/assets/bg/asset.svg";
 const asset1 = "/assets/bg/asset1.webp";
@@ -40,6 +41,7 @@ const about5 = "/assets/hero/about5.webp";
 
 export {
   bis,
+  bis_img1,
   bee,
   epr,
   isi,

@@ -8,7 +8,7 @@ const services = [
     title: "BIS",
     description:
       'Ministry of Electronics & Information Technology (MeitY) has notified "Electronics and Information...',
-    path: "/bis",
+    path: "/services/bis",
     image: bis,
     icon: <ChevronRight />,
   },
@@ -16,7 +16,7 @@ const services = [
     title: "BEE",
     description:
       "We help our clients get BEE labeling on their products. This labeling is given by Bureau of energy...",
-    path: "/service2",
+    path: "/services/bee",
     image: bee,
     icon: <ChevronRight />,
   },
@@ -24,7 +24,7 @@ const services = [
     title: "WPC",
     description:
       "Equipment Type Approval (ETA) is an approval that has to be obtained from WPC before importing...",
-    path: "/service3",
+    path: "/services/wpc",
     image: wpc,
     icon: <ChevronRight />,
   },
@@ -32,7 +32,7 @@ const services = [
     title: "ISI",
     description:
       "Bureau of Indian Standards (BIS) offers an ISI Marking scheme for all products...",
-    path: "/service4",
+    path: "/services/isi",
     image: isi,
     icon: <ChevronRight />,
   },
@@ -40,7 +40,7 @@ const services = [
     title: "TEC",
     description:
       "TEC refers to Telecom Engineering Centre, The Department of...",
-    path: "/service5",
+    path: "/services/tec",
     image: tec,
     icon: <ChevronRight />,
   },
@@ -48,7 +48,7 @@ const services = [
     title: "EPR",
     description:
       "We at MCS Technology Inc, are providing end-to-end E-waste management...",
-    path: "/service6",
+    path: "/service/epr",
     image: epr,
     icon: <ChevronRight />,
   },

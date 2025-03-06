@@ -1,16 +1,16 @@
+import { bis_img1 } from "@/utils/ImgUtils";
+
 const BISRegistration = () => {
   return (
-    <article className="my-10 ">
+    <article className="my-10 serviceArticle ">
       <div className="container mx-auto md:p-6 md:pt-10 ">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-black text-400 transition-colors duration-300 text-center mb-10 lg:mb-20 ">
+        <h1 className="font-black  lg:text-center mb-10 lg:mb-20 text-[var(--color-black)] ">
           <span className="text-red-400">BIS</span> Registration for Electronic
           & IT Products
         </h1>
 
         <section className="mb-6 md:mt-20">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-black text-400 mb-4  transition-colors duration-300">
-            Introduction
-          </h2>
+          <h2 className=" font-black  my-4 ">Introduction</h2>
           <p>
             BIS Registration is the process of obtaining a license from the
             Bureau of Indian Standards (BIS) for products that comply with
@@ -26,6 +26,7 @@ const BISRegistration = () => {
             serves as third-party assurance of a product’s quality, safety, and
             reliability.
           </p>
+          <img src={bis_img1} alt="bis" />
           <p>
             The Bureau grants licenses to manufacturers whose products fall
             under mandatory or voluntary certification schemes. Once certified,
@@ -36,7 +37,9 @@ const BISRegistration = () => {
             people, animals, and plants. Additionally, it aims to prevent unfair
             trade practices.
           </p>
-          <h3>BIS Registration for Electronics & IT Products</h3>
+          <h3 className=" text-[var(--color-black)] font-bold mt-4 mb-2">
+            BIS Registration for Electronics & IT Products
+          </h3>
           <p>
             BIS Registration is particularly crucial for electronic and IT
             products, as compliance with quality control standards is mandatory.
@@ -49,9 +52,9 @@ const BISRegistration = () => {
         </section>
 
         <section className="mb-6">
-          <h2 className="text-2xl font-semibold mb-2">
+          <h3 className="text-[var(--color-black)] font-bold mt-4 mb-2">
             Compulsory Registration Scheme (CRS)
-          </h2>
+          </h3>
           <p>
             To protect consumers from counterfeit and substandard electronic
             products, the Department of Electronics and Information Technology
@@ -74,7 +77,7 @@ const BISRegistration = () => {
         </section>
 
         <section className="mb-6">
-          <h2 className="text-2xl font-semibold mb-2">
+          <h2 className="font-black text-400 my-4 ">
             Products Covered Under the Compulsory Registration Scheme (CRS)
           </h2>
           <p>
@@ -84,16 +87,16 @@ const BISRegistration = () => {
             (BIS) has made certification mandatory for these products to ensure
             quality, safety, and reliability.
           </p>
-          <h3 className="text-2xl font-semibold mb-2">
+          <h3 className="text-[var(--color-black)] font-bold mt-4 mb-2">
             Categories of Products Under CRS
           </h3>
           <p>Here are some key product categories covered under the CRS:</p>
           <section>
-            <h3>
-              <h2 className="text-2xl font-semibold mb-2">
+            <div>
+              <h3 className="text-[var(--color-black)] font-bold mt-4 mb-2">
                 1. Information Technology (IT) and Audio-Visual Equipment
-              </h2>
-            </h3>
+              </h3>
+            </div>
             <ul className="list-disc pl-6">
               <li>Mobile Phones</li>
               <li>Laptops, Notebooks, and Tablets</li>
@@ -105,11 +108,11 @@ const BISRegistration = () => {
           </section>
 
           <section>
-            <h3>
-              <h2 className="text-2xl font-semibold mb-2">
+            <div>
+              <h3 className=" text-[var(--color-black)] font-bold mt-4 mb-2">
                 2. Power Adaptors and Power Supplies
-              </h2>
-            </h3>
+              </h3>
+            </div>
             <ul className="list-disc pl-6">
               <li>Mobile and Laptop Chargers</li>
               <li>USB Power Banks</li>
@@ -119,11 +122,11 @@ const BISRegistration = () => {
           </section>
 
           <section>
-            <h3>
-              <h2 className="text-2xl font-semibold mb-2">
+            <div>
+              <h3 className="text-[var(--color-black)] font-bold mt-4 mb-2">
                 3. Lighting and Electrical Equipment
-              </h2>
-            </h3>
+              </h3>
+            </div>
             <ul className="list-disc pl-6">
               <li>LED Bulbs and Tubes</li>
               <li>LED Luminaires</li>
@@ -132,9 +135,9 @@ const BISRegistration = () => {
           </section>
           <section>
             <h3>
-              <h2 className="text-2xl font-semibold mb-2">
+              <h3 className=" text-[var(--color-black)] font-bold mt-4 mb-2">
                 4. Household and Kitchen Appliances
-              </h2>
+              </h3>
             </h3>
             <ul className="list-disc pl-6">
               <li>Microwave Ovens</li>
@@ -145,9 +148,9 @@ const BISRegistration = () => {
           </section>
           <section>
             <h3>
-              <h2 className="text-2xl font-semibold mb-2">
+              <h3 className="text-[var(--color-black)] font-bold mt-4 mb-2">
                 5. Measurement and Safety Equipment
-              </h2>
+              </h3>
             </h3>
             <ul className="list-disc pl-6">
               <li>Electronic Clocks with Mains Power</li>
@@ -157,9 +160,9 @@ const BISRegistration = () => {
           </section>
           <section>
             <h3>
-              <h2 className="text-2xl font-semibold mb-2">
+              <h3 className=" text-[var(--color-black)] font-bold mt-4 mb-2">
                 6. Other Electronic Devices
-              </h2>
+              </h3>
             </h3>
             <ul className="list-disc pl-6">
               <li>CCTV Cameras and Recorders</li>
@@ -176,7 +179,7 @@ const BISRegistration = () => {
         </section>
 
         <section className="mb-6">
-          <h2 className="text-2xl font-semibold mb-2">
+          <h2 className="font-black mb-4 ">
             Get Certified with Expert Assistance!
           </h2>
           <p>
