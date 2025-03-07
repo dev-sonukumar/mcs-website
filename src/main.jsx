@@ -15,7 +15,7 @@ import AdminProfile from "./Pages/admin/AdminProfile";
 import BisFaqManager from "./components/admin/BisFaqManager";
 import SmoothScroll from "./utils/smootScroll";
 import CanvasCursor from "./components/CanvasCursor";
-import Bis from "./ServicePages/Bis";
+import Bis from "./ServicePages/Bis/Bis";
 import AboutUs from "./Pages/AboutUs";
 
 const useIsMobile = () => {

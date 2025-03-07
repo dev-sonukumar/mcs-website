@@ -1,5 +1,5 @@
-import { bis_img1, bis_img2, bis_img3 } from "@/utils/ImgUtils";
-import { Phone } from "lucide-react";
+import { bis_img1, bis_img2, bis_img3, bis_img4 } from "@/utils/ImgUtils";
+import BisProducts from "./BisProducts";
 
 const BISRegistration = () => {
   return (
@@ -98,6 +98,10 @@ const BISRegistration = () => {
           </h2>
           <p>Here are some key product categories covered under the CRS:</p>
           <img src={bis_img2} alt="bis" className="my-10" />
+
+          <section>
+            <BisProducts />
+          </section>
           <section>
             <div>
               <h3 className="font-bold mt-4 mb-2">
@@ -202,9 +206,7 @@ const BISRegistration = () => {
             their products in the Indian market.
           </p>
           <img src={bis_img3} alt="bis" className="my-10" />
-          <h3 className=" font-bold mt-4 mb-2">
-            Step-by-Step BIS Registration Process
-          </h3>
+
           <h3 className="font-bold mt-4 mb-2">
             Step 1: Determine Product Eligibility
           </h3>
@@ -289,7 +291,11 @@ const BISRegistration = () => {
             trusted BIS registration consultant, we simplify the entire process,
             ensuring a hassle-free certification experience.
           </p>
-          <h3 className="font-bold mt-4 mb-2">Why Choose Us?</h3>
+          <img src={bis_img4} alt="bis" className="mt-10" />
+          <h2 className="font-extrabold mt-4 mb-2 text-red-400">
+            Why Choose Us?
+          </h2>
+
           <div>
             <p>
               <span className="font-bold">✔ End-to-End Assistance –</span> From
@@ -348,7 +354,7 @@ const BISRegistration = () => {
                 +91-7065995901
               </button>
             </a>
-            <a href="tel:+917065995901">
+            <a href="tel:+917011310361">
               <button
                 aria-label="Call Now"
                 className=" flex items-center font-bold "
