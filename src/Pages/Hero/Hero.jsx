@@ -7,7 +7,7 @@ import ServicesAnimation from "../AminamtionPages/ServicesAnimation";
 const Hero = () => {
   return (
     <section
-      className="bg-no-repeat bg-cover h-[80vh] flex  "
+      className="bg-no-repeat bg-cover h-[100vh] flex  "
       style={{ backgroundImage: `url(${bg})` }}
     >
       <div className="w-full flex justify-between items-center mt-[-60px] lg:mt-[-120px]">

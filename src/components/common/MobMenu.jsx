@@ -43,7 +43,7 @@ export default function MobMenu({ Menus }) {
         initial={{ x: "-100%" }}
         animate={{ x: isOpen ? "0%" : "-100%" }}
         transition={{ duration: 0.4, ease: "easeInOut" }}
-        className="fixed left-0 right-0 top-[90px] overflow-y-auto h-full bg-[#18181A] backdrop-blur text-white p-6 pb-20"
+        className="fixed left-0 right-0 top-[65px] overflow-y-auto h-full bg-[#18181A] backdrop-blur text-white p-6 pb-20"
       >
         <ul>
           {Menus.map(({ name, path, subMenu }, i) => {
