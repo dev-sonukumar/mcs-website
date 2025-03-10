@@ -209,7 +209,7 @@ const data = [
 
 const BisProducts = () => {
   return (
-    <div className="p-4">
+    <div className="py-5">
       <table className="w-full border-collapse border border-gray-300">
         <thead>
           <tr className="bg-gray-200">

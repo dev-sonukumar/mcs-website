@@ -6,7 +6,7 @@ import { Menus } from "../utils/MenuUtils";
 
 export default function Navbar() {
   return (
-    <header className="z-50 fixed top-0 left-0 py-2 text-[15px]  w-full flex flex-col gap-2 bg-white  shadow-lg">
+    <header className="z-50 sticky top-0 left-0 py-2 text-[15px]  w-full flex flex-col gap-2 bg-white  shadow-lg">
   
     
       <div className="container">

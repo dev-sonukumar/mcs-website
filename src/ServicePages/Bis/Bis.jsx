@@ -30,7 +30,7 @@ const BISRegistration = () => {
             serves as third-party assurance of a product’s quality, safety, and
             reliability.
           </p>
-          <img src={bis_img1} alt="bis" />
+          <img src={bis_img1} alt="bis"  className="py-5"/>
           <p>
             The Bureau grants licenses to manufacturers whose products fall
             under mandatory or voluntary certification schemes. Once certified,
@@ -97,92 +97,12 @@ const BISRegistration = () => {
             Categories of Products Under CRS
           </h2>
           <p>Here are some key product categories covered under the CRS:</p>
-          <img src={bis_img2} alt="bis" className="my-10" />
+          {/* <img src={bis_img2} alt="bis" className="my-10" /> */}
 
-          <section>
+          <section >
             <BisProducts />
           </section>
-          <section>
-            <div>
-              <h3 className="font-bold mt-4 mb-2">
-                1. Information Technology (IT) and Audio-Visual Equipment
-              </h3>
-            </div>
-            <ul className="list-disc pl-6">
-              <li>Mobile Phones</li>
-              <li>Laptops, Notebooks, and Tablets</li>
-              <li>LED/LCD Televisions</li>
-              <li>Set-Top Boxes</li>
-              <li>Smartwatches</li>
-              <li>Wireless Keyboards and Mouse</li>
-            </ul>
-          </section>
-
-          <section>
-            <div>
-              <h3 className="  font-bold mt-4 mb-2">
-                2. Power Adaptors and Power Supplies
-              </h3>
-            </div>
-            <ul className="list-disc pl-6">
-              <li>Mobile and Laptop Chargers</li>
-              <li>USB Power Banks</li>
-              <li>UPS/Inverters (≤ 5kVA)</li>
-              <li>External Hard Drives with Power Adaptors</li>
-            </ul>
-          </section>
-
-          <section>
-            <div>
-              <h3 className="font-bold mt-4 mb-2">
-                3. Lighting and Electrical Equipment
-              </h3>
-            </div>
-            <ul className="list-disc pl-6">
-              <li>LED Bulbs and Tubes</li>
-              <li>LED Luminaires</li>
-              <li>LED Control Gear</li>
-            </ul>
-          </section>
-
-          <section>
-            <h3>
-              <h3 className="font-bold mt-4 mb-2">
-                4. Household and Kitchen Appliances
-              </h3>
-            </h3>
-            <ul className="list-disc pl-6">
-              <li>Microwave Ovens</li>
-              <li>Induction Stoves</li>
-              <li>Electric Irons</li>
-              <li>Electric Immersion Water Heaters</li>
-            </ul>
-          </section>
-          <section>
-            <h3>
-              <h3 className="font-bold mt-4 mb-2">
-                5. Measurement and Safety Equipment
-              </h3>
-            </h3>
-            <ul className="list-disc pl-6">
-              <li>Electronic Clocks with Mains Power</li>
-              <li>Gas Analyzers</li>
-              <li>Digital Thermometers</li>
-            </ul>
-          </section>
-          {/* ------- Section 4 ------- */}
-          <section>
-            <h3>
-              <h3 className="font-bold mt-4 mb-2">
-                6. Other Electronic Devices
-              </h3>
-            </h3>
-            <ul className="list-disc pl-6">
-              <li>CCTV Cameras and Recorders</li>
-              <li>Smart Speakers</li>
-              <li>Passive Infrared Sensors</li>
-            </ul>
-          </section>
+          
           <p>
             The list of products under CRS is continuously updated by BIS to
             include new and emerging technologies. Any manufacturer, importer,

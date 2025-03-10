@@ -44,7 +44,7 @@ const OurApproach = () => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
-              className="text-5xl font-extrabold text-gray-900 mb-10"
+              className="text-5xl font-extrabold text-[var(--heading-color)] mb-10"
             >
               Expertise in Strategy, Design, and Development
             </motion.h2>
@@ -53,7 +53,7 @@ const OurApproach = () => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
-              className="text-gray-700 text-lg mb-14 max-w-3xl mx-auto"
+              className="text-[var(--paragraph-color)] text-lg mb-14 max-w-3xl mx-auto"
             >
               To build a successful digital solution, we follow a
               well-maintained structured approach that ensures functionality,
@@ -80,7 +80,7 @@ const OurApproach = () => {
             {approachData.map((item, index) => (
               <motion.div
                 key={index}
-                className="flex  justify-center relative bg-blue-500 text-white p-8 rounded-xl shadow-md overflow-hidden group"
+                className="flex  justify-center relative bg-blue-500  p-8 rounded-xl shadow-md overflow-hidden group"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
@@ -100,8 +100,8 @@ const OurApproach = () => {
 
                   {/* Content */}
                   <div className="relative z-10 group-hover:text-gray-900 transition-colors duration-700">
-                    <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
-                    <p className="text-base">{item.description}</p>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-100">{item.title}</h3>
+                    <p className="text-base text-gray-400">{item.description}</p>
                   </div>
                   <section>
                     <h2
